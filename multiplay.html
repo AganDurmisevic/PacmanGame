@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Titel -->
+	<title>PacMan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Style/CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style/multiplay.css">
+    
+    <!-- JavaScript -->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/howler.min.js"></script>
+    <script type="text/javascript" src="js-multiplayer/music.js"></script>
+</head>
+<body>
+    
+    <!-- Text Container -->
+    <div id="nextlvl" class="next"></div>
+    
+    <!-- Navigations anfang -->
+    <nav>
+         <ul>
+            <li><a href="index.html">Pacman</a></li>                                <!-- das Spiel -->
+            <li><a href="#Highscore">Highscore</a></li>                    <!-- die Highscore-Liste -->
+            <li><a href="multiplay.html">Multiplay</a></li>                        <!-- Spieler Modus -->
+            <li><a href="javascript:location.reload()">New Game</a></li>    <!-- neues Spiel (reload) -->
+          </ul>
+        </nav> 
+    <!-- Navigations ende -->
+
+
+    <!-- die Multiplay-Seite anfang -->
+    <div class="onepage" id="Multiplay">
+        <div id='container'>
+                <div id="life-score-container">
+                    <div id="herzen">
+                        <h2 id="leben">SPIELER 1 :</h2>
+                        <div id="herzen-lvl">
+                        </div>
+                        <h2 id="score">SCORE 1: </h2>
+                        <div id="level-anzeige">
+                            <h2 id="level-anzeige-text">LEVEL: </h2>
+                            <h2 id="level-anzeige-zahl"></h2>
+                        </div>
+                    </div>
+                    <div id="herzen2">
+                        <h2 id="leben2">SPIELER 2 :</h2>
+                        <div id="herzen-lvl2">
+                        </div>
+                        <h2 id="score2">SCORE 2: </h2>
+                    </div>
+                </div>
+                <div id='world'>
+                <!-- ... -->
+                <!-- <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <br>
+                <div class='wall'></div>
+                <div class="pacman" id="pacman">
+                <div class='ground'></div>
+                <div class='coin'></div>
+                <div class='wall'></div>
+                <br>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                <div class='wall'></div>
+                -->
+                <!-- ... -->
+                </div>
+            </div>
+        </div>
+    <!-- die Multiplay-Seite ende -->
+    
+    <!-- die Highscore-Seite anfang -->
+    <div class="onepage" id="Highscore">
+        <div id="highscore">
+            <h2 id="highscore-text">Highscore</h2>
+            <div id="highscores">
+                <ol id="ol">
+                </ol>
+            </div>
+            <button id="leeren" onclick="clearStorage()">Clear All</button>
+            
+            <script>
+                function clearStorage() 
+                {
+                    localStorage.clear();
+                }
+            </script>
+        </div>
+        </div>
+    <!-- die Highscore-Seite ende -->
+    
+    <!-- JavaScript -->
+    <script src="js-multiplayer/levelsMulti.js"></script>
+    <script src="js/pacman.js"></script>
+    <script src="js-multiplayer/steuerungMulti.js"></script>
+    <script src="js-multiplayer/gewonnenMulti.js"></script>
+    <script src="js/teleport.js"></script>
+    <script src="js/steuerung_function.js"></script>
+    <script src="js/geister_steuerung.js"></script>
+    <script src="js-multiplayer/herzenMalenMulti.js"></script>
+    <script src="js-multiplayer/verlorenMulti.js"></script>
+    <!--<script src="js/localStorage.js"></script>-->
+    <script src="js-multiplayer/drawWorld2.js"></script>
+</body>
+</html>
