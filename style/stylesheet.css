@@ -1,5 +1,3 @@
-        /* @media angaben noch nicht richtig und werden noch bearbeitet */
-
         body, html {
             background: transparent;
         }
@@ -14,7 +12,7 @@
             overflow-y: hidden;
 		}
 
-        /* Navigation anfang */
+        /* Navigation start */
 		nav {
             position: absolute;
             left: 40%; 
@@ -44,9 +42,9 @@
         a:hover {
             text-shadow: none;
         }
-        /* Navigation ende */
+        /* Navigation end */
 
-        /* Onepage anfang */
+        /* Onepage start */
         .onepage {
             height: 100%;
             margin: 0;
@@ -68,9 +66,9 @@
           background-color: #35587E;
         }
         
-        /* Onepage ende */
+        /* Onepage end */
 
-        /* Spiel anfang */
+        /* Game start */
         #container {
             overflow-x: hidden;
             overflow-y: hidden;
@@ -106,7 +104,7 @@
             text-align: right;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
         }
-        #level-anzeige {
+        #level-show {
             position: absolute;
             left: 149rem;
             top: 5px;
@@ -118,7 +116,7 @@
             z-index: 15;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
         }
-        #level-anzeige-text {
+        #level-show-text {
             position: absolute;
             left: 0;
             top: 5px;
@@ -130,7 +128,7 @@
             z-index: 17;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
         }
-        #level-anzeige-zahl {
+        #level-show-number {
             position: absolute;
             left: 13rem;
             top: -1.3rem;
@@ -143,7 +141,7 @@
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
         }
 
-        #herzen {
+        #hearts {
             position: absolute;
             width: auto;
             height: auto;
@@ -152,7 +150,7 @@
             margin-top: 1%;
             margin-left: 15%;
         }
-        #herzen-lvl {
+        #hearts-lvl {
             position: absolute;
             margin: 0;
             padding: 10px;
@@ -163,7 +161,7 @@
             display: inline-block;
             margin-top: 6%;
         }
-        #leben {
+        #life {
             width: 480px;
             height: 70px;
             position: absolute;
@@ -211,7 +209,7 @@
               position: relative;
               margin-top: 8px;
         }
-        .pacman-lied{
+        .pacman-eyes{
             position: absolute;
             width: 13px;
             height: 13px;
@@ -221,7 +219,7 @@
             border-radius: 50%;
             border: .5px solid black;
         }
-        .pacman-auge{
+        .pacman-eye{
             background-color: red;
             width: 7px;
             height: 7px;
@@ -240,7 +238,7 @@
               margin-top: -4px;
         }
 
-        /* Extra Classen anfang */
+        /* Extra class start */
         .pacman-paused {
             width: 50px;
 			height: 50px;
@@ -259,7 +257,7 @@
               position: relative;
               margin-top: 25px;
         }
-        /* Extra Classen ende */
+        /* Extra class end */
 
         .redGhost {
 			width: 50px;
@@ -268,7 +266,7 @@
             background-size: cover;
             background-position: center;
 			display: inline-block;
-            animation: geister 1s linear infinite;
+            animation: ghosts 1s linear infinite;
 		}
         .yellowGhost {
             width: 50px;
@@ -277,7 +275,7 @@
             background-size: cover;
             background-position: center;
             display: inline-block;
-            animation: geister 1s linear infinite;
+            animation: ghosts 1s linear infinite;
         }
         .greenGhost {
             width: 50px;
@@ -286,7 +284,7 @@
             background-size: cover;
             background-position: center;
             display: inline-block;
-            animation: geister 1s linear infinite;
+            animation: ghosts 1s linear infinite;
         }
         .pinkGhost {
             width: 50px;
@@ -295,7 +293,7 @@
             background-size: cover;
             background-position: center;
             display: inline-block;
-            animation: geister 1s linear infinite;
+            animation: ghosts 1s linear infinite;
         }
 
         .wall {
@@ -350,21 +348,21 @@
 }
 
         .pacman-bg, .wall, .coin, .ground, .coin1, .coin2, .wallL, .redGhost, .yellowGhost, .greenGhost, .pinkGhost {
-                vertical-align: top;
+            vertical-align: top;
         }
 
-        #nextlvl {
-                    position: absolute;
-                    color: white;
-                    margin-top: 34%;
-                    margin-left: 37%;
-                    font-size: 3rem;
-                    text-align: center;
-                    font-weight: bolder;
-                    overflow-x: hidden;
-                    z-index: 10;
-                    animation: text 2s infinite;
-                }
+        #nextLvl {
+            position: absolute;
+            color: white;
+            margin-top: 34%;
+            margin-left: 37%;
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bolder;
+            overflow-x: hidden;
+            z-index: 10;
+            animation: text 2s infinite;
+        }
         #highscore {
             position: relative;;
             overflow-x: hidden;
@@ -404,7 +402,7 @@
             border: none;
         }
             
-        #leeren {
+        #clear {
             position: absolute;
             color: white;
             background: #39485E;
@@ -419,13 +417,13 @@
             padding-top: .4%;
             outline: none;
         }
-        #leeren:hover {
+        #clear:hover {
             color: #39485E;
             background: white;
         }
-        /* Spiel ende */
+        /* Game end */
         
-        /* Pacman drehen anfang */
+        /* Pacman drehen start */
         .turn-90 {  
             transform: rotate(90deg);   
 }
@@ -438,10 +436,10 @@
         .turn-360 {  
             transform: rotate(360deg); 
 }
-        /* Pacman drehen ende */
+        /* Pacman drehen end */
 
-        /* Geister (animation) anfang */
-        @keyframes geister{
+        /* Ghosts (animation) start */
+        @keyframes ghosts{
 		  1%{
 		    transform: rotate(2deg);
 		  }
@@ -452,9 +450,9 @@
 		    transform: rotate(2deg);
 		  }
 		}
-        /* Geister (animation) anfang */
+        /* Ghosts (animation) start */
             
-        /* Text (animation) anfang */
+        /* Text (animation) start */
         @keyframes text {
                   10%{
                       margin-top: 35%;
@@ -466,9 +464,9 @@
                       margin-top: 35%;
                   }
                 } 
-        /* Text (animation) ende */
+        /* Text (animation) end */
 
-        /* Coins (animation) anfang */
+        /* Coins (animation) start */
         @keyframes coinsAnim {
                   10%{
                       transform: scale(0.9);
@@ -483,9 +481,9 @@
                       transform: scale(1);
                   }
                 } 
-        /* Coins (animation) ende */    
+        /* Coins (animation) end */
             
-        /* Pacman (animation) anfang */
+        /* Pacman (animation) start */
 	    @keyframes spin1 {
                 0%  {transform: rotate(0deg);}
                 50%{transform: rotate(-45deg);}
@@ -516,7 +514,7 @@
                 1%{transform: rotate(-90deg);}
                 100%{transform: rotate(90deg);}
         }
-        /* Pacman (animation) ende */
+        /* Pacman (animation) end */
         }
         
         @media only screen and (max-height: 830px) { 
@@ -528,7 +526,7 @@
                 top: 0;
             }
             
-            /* Navigation anfang */
+            /* Navigation start */
             nav {
                 position: absolute;
                 left: 30%; 
@@ -551,9 +549,9 @@
             a:hover {
                 text-shadow: none;
             }
-            /* Navigation ende */
+            /* Navigation end */
             
-            /* Spiel anfang */
+            /* Game start */
             #life-score-container {
                 position: sticky;
             }
@@ -569,7 +567,7 @@
                 left: -70px;
                 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
             }
-            #level-anzeige {
+            #level-show {
             position: absolute;
             left: 60rem;
             top: 5px;
@@ -581,7 +579,7 @@
             z-index: 15;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
         }
-            #level-anzeige-text {
+            #level-show-text {
             position: absolute;
             left: 0;
             top: 5px;
@@ -594,7 +592,7 @@
             z-index: 17;
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
         }
-            #level-anzeige-zahl {
+            #level-show-number {
             position: absolute;
             left: 110px;
             top: -30px;
@@ -607,19 +605,19 @@
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
         }
 
-            #herzen {
+            #hearts {
                 position: absolute;
                 display: flex;
                 flex-direction: row;
             }
-            #herzen-lvl {
+            #hearts-lvl {
                 position: absolute;
                 width: 120px;
                 left: 10px;
                 display: inline-block;
                 margin-top: 2%;
             }
-            #leben {
+            #life {
                 width: auto;
                 height: auto;
                 left: -90px;
@@ -669,7 +667,7 @@
                   position: relative;
                   margin-top: 6.4px;
             }
-            .pacman-lied{
+            .pacman-eyes{
                 position: absolute;
                 max-width: 10.4px;
                 max-height: 10.4px;
@@ -679,7 +677,7 @@
                 border-radius: 50%;
                 border: .5px solid black;
             }
-            .pacman-auge{
+            .pacman-eye{
                 background-color: red;
                 max-width: 4.6px;
                 max-height: 4.6px;
@@ -698,7 +696,7 @@
                   margin-top: -2px;
             }
 
-            /* Extra Classen anfang */
+            /* Extra class start */
             .pacman-paused {
                 width: 50px;
                 height: 50px;
@@ -717,34 +715,52 @@
                   position: relative;
                   margin-top: 25px;
             }
-            /* Extra Classen ende */
+            /* Extra class end */
 
             .redGhost {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url(../bilder/redGhost.png  );
+                background-image: url(../bilder/rot.png  );
                 background-size: cover;
                 background-position: center;
                 display: inline-block;
-                animation: geister 1s linear infinite;
+                animation: ghosts 1s linear infinite;
             }
             .yellowGhost {
-                        max-width: 40px;
-                        max-height: 40px;
-                        background-image: url(../bilder/orangeGhost.png);
-                        background-size: cover;
-                        background-position: center;
-                        display: inline-block;
-                        animation: geister 1s linear infinite;
+                max-width: 40px;
+                max-height: 40px;
+                background-image: url(../bilder/gelb.png);
+                background-size: cover;
+                background-position: center;
+                display: inline-block;
+                animation: ghosts 1s linear infinite;
                     }
+            .greenGhost {
+                max-width: 40px;
+                max-height: 40px;
+                background-image: url(../bilder/blau.png);
+                background-size: cover;
+                background-position: center;
+                display: inline-block;
+                animation: ghosts 1s linear infinite;
+            }
+            .pinkGhost {
+                max-width: 40px;
+                max-height: 40px;
+                background-image: url(../bilder/pink.png);
+                background-size: cover;
+                background-position: center;
+                display: inline-block;
+                animation: ghosts 1s linear infinite;
+            }
 
             .wall {
-                        max-height: 40px;
-                        max-width: 40px;
-                        background-image: url('../bilder/neon.png');
-                        background-position: center;
-                        background-size: cover;
-                        display: inline-block;
+                max-height: 40px;
+                max-width: 40px;
+                background-image: url('../bilder/neon.png');
+                background-position: center;
+                background-size: cover;
+                display: inline-block;
             }
             .wallL {
                 max-height: 40px;
@@ -789,7 +805,7 @@
                 display: inline-block;
             }
 
-            #nextlvl {
+            #nextLvl {
                     position: absolute;
                     color: white;
                     margin-top: 50%;
@@ -811,8 +827,8 @@
                   80%{
                       margin-top: 51%;
                   }
-                } 
-            
+                }
+
             #highscore {
             position: relative;;
             overflow-x: hidden;
@@ -837,8 +853,8 @@
                 left: 0;
                 font-size: 44px;
             }
-            #leeren {
+            #clear {
                 left:  50px;
             }
-            /* Spiel ende */  
+            /* Game end */
         }

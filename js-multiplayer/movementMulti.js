@@ -1,31 +1,30 @@
-    // Hilfe für die Zuweisung der Objekte:
-    // 1 = <div class='wall'></div>            Mauer
-	// 2 = <div class='coin'></div>            Essen     
-	// 3 = <div class='ground'></div>          Grund
-    // 4 = <div class='coin1'></div>           Essen
-	// 5 = <div class='pacman'></div>          Pacman(Gelb)
-    // 6 = <div class='coin2'></div>           Essen
-    // 7 = <div class='wallL'></div>           Mauer
-    // 8 = <div class='redGhost'></div>        Roter Geist
-    // 9 = <div class='yellowGhost'></div>     Gelber Geist
+    // Map:
+    // 1 = <div class='wall'></div>            Wall
+	// 2 = <div class='coin'></div>            Food
+	// 3 = <div class='ground'></div>          Ground
+    // 4 = <div class='coin1'></div>           Food
+	// 5 = <div class='pacman'></div>          Pacman(Yellow)
+    // 6 = <div class='coin2'></div>           Food
+    // 7 = <div class='wallL'></div>           Wall
+    // 8 = <div class='redGhost'></div>        Red Ghost
+    // 9 = <div class='yellowGhost'></div>     Yellow Ghost
     // 10 = <div class='pacman2'></div>        Pacman 2 (Grün)
-    // 11 = <div class='freenGhost'></div>     Grüner Geist
-    // 12 = <div class='pinkGhost'></div>      Pinker Geist
+    // 11 = <div class='freenGhost'></div>     Grüner Ghost
+    // 12 = <div class='pinkGhost'></div>      Pinker Ghost
 
-    //Standardmodus bzw. Spielmodus
-    //Wartet auf Tastatur angaben um Pacman, Pacman2 und Geister zu Steuern.
+    //Standard mode / Game mode
+    //Waiting on keyboard listener to control Pacman, Pacman2 and Ghosts.
     var standard = function(e) 
     {
-            //Geister Steuerung
+            //Ghosts Movement
             moveGhost(e);
         
-            /**
-                Wenn <- gedrückt wird dann läuft der Pacman nach Links, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+            //If <- is pushed, then the Pacman will turn to the left, but only if there are no obstacles, if he meets 'fruits', will he come.
+
 			if (e.keyCode === 37)
             {
-                // Dreht den Pacman um 180deg weil er anfangs nach Rechts guckt.
-                // Achtet auf die Mauern
+                // Turn the Pacman 180deg because he starts to look to the right.
+                // Pay attention to the walls.
                 pacman.direction = 'turn-180';
                 if(map[pacman.y][pacman.x-1] !== 1 && map[pacman.y][pacman.x-1] !== 7)
                 {
@@ -44,60 +43,56 @@
                         score = score + 40;
                         eat.play();
                     }
-                    if(currentLevel > 0 && map[pacman.y][pacman.x] == map[3][0])
+                    if(currentLevel > 0 && map[pacman.y][pacman.x] === map[3][0])
                     {
                         newPositionLeft();
-                        platz.play();
+                        winner.play();
                     }
                     document.getElementById('score').innerHTML = ("SCORE: " + score);
                     moveLeft(pacman);
                     drawWorld();
-                    verlorenMulti();
-                    gewonnenMulti();
+                    loseMulti();
+                    wonMulti();
                 }
                 drawWorld();
             }
-        
-            /**   
-                     ^
-                Wenn | gedrückt wird dann läuft der Pacman nach Oben, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+
+             //   ^
+             //If | is pressed then the Pacman runs to the top, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if (e.keyCode === 38)
             {
-            // dreht den Pacman um 270deg weil er anfangs nach rechts guckt und 90deg ihn nach unten dreht.
+            //Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
             pacman.direction = 'turn-270';
-            if (map[pacman.y-1][pacman.x] !== 1 && map[pacman.y-1][pacman.x] !== 7)
-            {
-                if(map[pacman.y-1][pacman.x] === 2)
+                if (map[pacman.y-1][pacman.x] !== 1 && map[pacman.y-1][pacman.x] !== 7)
                 {
-                    score = score + 10;
-                    eat.play();
-                }
-                if(map[pacman.y-1][pacman.x] === 6)
-                {
-                    score = score + 10;
-                    eatPill.play();
-                }
-                if(map[pacman.y-1][pacman.x] === 4)
-                {
-                    score = score + 40;
-                    eat.play();
-                }
-                document.getElementById('score').innerHTML = ("SCORE: " + score);
-                moveUp(pacman);
-                drawWorld();
-                verlorenMulti();
-                gewonnenMulti();
+                    if(map[pacman.y-1][pacman.x] === 2)
+                    {
+                        score = score + 10;
+                        eat.play();
+                    }
+                    if(map[pacman.y-1][pacman.x] === 6)
+                    {
+                        score = score + 10;
+                        eatPill.play();
+                    }
+                    if(map[pacman.y-1][pacman.x] === 4)
+                    {
+                        score = score + 40;
+                        eat.play();
+                    }
+                    document.getElementById('score').innerHTML = ("SCORE: " + score);
+                    moveUp(pacman);
+                    drawWorld();
+                    loseMulti();
+                    wonMulti();
                 }
                 drawWorld();
             }
         
-            /**
-                Wenn -> gedrückt wird dann läuft der Pacman nach Rechts, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+            //If -> is pressed then the Pacman runs to the right, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if (e.keyCode === 39)
             {
-            //direction ist leer weil nach Rechts gucken Standard ist (unveränderter zustand).
+            //direction is empty because looking to the right is default (unchanged state).
             pacman.direction = '';
             if(map[pacman.y][pacman.x+1] !== 1 && map[pacman.y][pacman.x+1] !== 7)
             {
@@ -111,27 +106,25 @@
                     score = score + 40;
                     eatPill.play();
                 }
-                if(currentLevel > 0 && map[pacman.y][pacman.x] == map[9][19])
+                if(currentLevel > 0 && map[pacman.y][pacman.x] === map[9][19])
                 {
                     newPositionRight(); 
-                    platz.play();
+                    winner.play();
                 }
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 moveRight(pacman);
                 drawWorld();
-                verlorenMulti();
-                gewonnenMulti();
+                loseMulti();
+                wonMulti();
             }
             drawWorld();
             }
-        
-            /** 
-                     |
-                Wenn v gedrückt wird dann läuft der Pacman nach Unten, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+
+             //   |
+             //If v is pressed then the Pacman runs down, but only if there are no obstacles in front of him, otherwise he gets points when he hits fruits.
 			else if (e.keyCode === 40)
             {
-            // dreht den Pacman um 90deg (nach Unten) weil er anfangs nach rechts guckt.
+            //Turn the Pacman 90deg (down) because it starts to look right.
             pacman.direction = 'turn-90';
                 if(map[pacman.y+1][pacman.x] !== 1 && map[pacman.y+1][pacman.x] !== 7)
                 {
@@ -148,17 +141,17 @@
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 moveDown(pacman);
                 drawWorld();
-                verlorenMulti();
-                gewonnenMulti();
+                loseMulti();
+                wonMulti();
                 }
                 drawWorld();
             }
         
         
-            // Pacman 2
+            //Pacman 2
             else if (e.keyCode === 65)
             {
-                // dreht den Pacman um 180deg weil er anfangs nach Rechts guckt.
+                //Turns the Pacman 180deg because he starts to look to the right.
                 pacman2.direction = 'turn-180';
                 if(map[pacman2.y][pacman2.x-1] !== 1 && map[pacman2.y][pacman2.x-1] !== 7)
                 {
@@ -177,27 +170,25 @@
                         score2 += 40;
                         eat.play();
                     }
-                    if(currentLevel > 0 && map[pacman2.y][pacman2.x] == map[3][0])
+                    if(currentLevel > 0 && map[pacman2.y][pacman2.x] === map[3][0])
                     {
                         newPositionLeft();   
-                        platz.play();
+                        winner.play();
                     }
                     document.getElementById('score2').innerHTML = ("SCORE: " + score2);
                     moveLeft(pacman2);
                     drawWorld();
-                    verlorenMulti();
-                    gewonnenMulti();
+                    loseMulti();
+                    wonMulti();
                 }
                 drawWorld();
             }
         
-            /**   
-                     ^
-                Wenn | gedrückt wird dann läuft der Pacman nach Oben, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+            //   ^
+            //If | is pressed then the Pacman runs to the top, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if (e.keyCode === 87)
             {
-            // dreht den Pacman um 270deg weil er anfangs nach rechts guckt und 90deg ihn nach unten dreht.
+            //Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
             pacman2.direction = 'turn-270';
             if (map[pacman2.y-1][pacman2.x] !== 1 && map[pacman2.y-1][pacman2.x] !== 7)
             {
@@ -216,18 +207,16 @@
                 document.getElementById('score2').innerHTML = ("SCORE: " + score2);
                 moveUp(pacman2);
                 drawWorld();
-                gewonnenMulti();
-                verlorenMulti();
+                wonMulti();
+                loseMulti();
                 }
                 drawWorld();
             }
         
-            /**
-                Wenn -> gedrückt wird dann läuft der Pacman nach Rechts, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+            //If -> is pressed then the Pacman runs to the right, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if (e.keyCode === 68)
             {
-            //direction ist leer weil nach Rechts gucken Standard ist (unveränderter zustand).
+            //Direction is empty because looking to the right is default (unchanged state).
             pacman2.direction = '';
             if(map[pacman2.y][pacman2.x+1] !== 1 && map[pacman2.y][pacman2.x+1] !== 7)
             {
@@ -241,27 +230,26 @@
                     score2 += 40;
                     eatPill.play();
                 }
-                if(currentLevel > 0 && map[pacman2.y][pacman2.x] == map[9][19])
+                if(currentLevel > 0 && map[pacman2.y][pacman2.x] === map[9][19])
                 {
                     newPositionRight();
-                    platz.play();
+                    winner.play();
                 }
                 document.getElementById('score2').innerHTML = ("SCORE: " + score2);
                 moveRight(pacman2);
                 drawWorld();
-                gewonnenMulti();
-                verlorenMulti();
+                wonMulti();
+                loseMulti();
             }
             drawWorld();
             }
-        
-            /** 
-                     |
-                Wenn v gedrückt wird dann läuft der Pacman2 nach Unten, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
-            */
+
+            //   |
+            //If v is pressed then the Pacman2 will run down, but only if there are no obstacles in front of him, otherwise he will score points if he hits 'fruits'.
+
 			else if (e.keyCode === 83)
             {
-            // dreht den Pacman2 um 90deg (nach Unten) weil er anfangs nach rechts guckt.
+            //Turns the Pacman2 90deg (down) because he starts to look right.
             pacman2.direction = 'turn-90';
                 if(map[pacman2.y+1][pacman2.x] !== 1 && map[pacman2.y+1][pacman2.x] !== 7)
                 {
@@ -278,15 +266,13 @@
                 document.getElementById('score2').innerHTML = ("SCORE: " + score2);
                 moveDown(pacman2);
                 drawWorld();
-                gewonnenMulti();
-                verlorenMulti();
+                wonMulti();
+                loseMulti();
                 }
                 drawWorld();
             }
         
-            /** 
-                Wenn Enter('13') gedrückt wird dann wechselt das Spiel in Pausenmodus und ignoriert den    EventListener in den Standardmodus (damit man in der Pause nicht Steuern kann) und        schreibt das man Pausiert hat.
-            */
+            //If Enter ('13 ') is pressed then the game switches to pause mode and ignores the EventListener in standard mode (so that you can not control during the break) and writes that you have paused.
             else if(e.keyCode === 13)
             {
                 document.getElementById('score').innerHTML = ("PAUSED");
@@ -294,36 +280,32 @@
                 //document.getElementById("container").classList.add('pacman-paused');
             }
             /**
-                Wenn R('82') gedrückt wird und function verloren() true liefert
-                wird das Level Spiel erneuert.
+                Wenn R('82') gedrückt wird und function lose() true liefert
+                wird das Level Game ernewert.
             */
-            else if(e.keyCode === 82 && verlorenMulti())
+            else if(e.keyCode === 82 && loseMulti())
             {
-                document.onkeydown = neuAnfang;
+                document.onkeydown = newStart;
             }
-            // Bei 2x drücken von -- wird automatisch neu gestartet (ohne einer Bedingung).
+            // Bei 2x drücken von -- wird automatisch new gestartet (ohne einer Bedingung).
             if(e.keyCode === 189)
             {
-                document.onkeydown = neuAnfang;
+                document.onkeydown = newStart;
             }
         
-            /**
-                Wenn Space('32') gedrückt wird und function gewonnen() true liefert
-                wird das Level erhöht bzw. Map, Pacman usw. auch neu geladen falls das neue Level 
-                existiert, ansonsten kommt die Nachticht das man das Maximale-Level erreicht hat.
-            */
-            if(gewonnenMulti()) 
+            //When R ('82 ') is pressed and function lose() returns true the game will be reaped.
+            if(wonMulti())
             { 
-                document.onkeydown = siegerModus;
-                sieg.play();
+                document.onkeydown = wonMode;
+                winner.play();
                 drawWorld();
             }
         drawWorld();
     }
     
-    //Pausemodus 
-    //Wartet auf Enter eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen - (reagiert nur auf Entertaste).
-    var pause = function(e) 
+    //paused mode
+    //Wait Enter Enter to change the mode or enter standard mode - (responds only to the Enter key).
+    var paused = function(e)
     {
         if(e.keyCode === 13)
         {
@@ -335,35 +317,35 @@
     }
     
     
-    //Verlorenmodus 
-    //Wartet auf R eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen und von anfang an anzufangen - (reagiert nur auf R). 
-    var neuAnfang = function(anfang)
+    //lose mode
+    //Wait for R to change the mode or to go into standard mode and start from the beginning - (responds only to R).
+    var newStart = function(start)
     {
-        if(anfang.keyCode === 82 || anfang.keyCode === 189)
+        if(start.keyCode === 82 || start.keyCode === 189)
         {
             document.onkeydown = standard;
             javascript:location.reload();
-            platz.play();
+            winner.play();
         }
         drawWorld();
     }
     
-    //Siegermodus 
-    //Wartet auf Leertasten eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen um nächste Level zu laden - (reagiert dafür auf die Leertaste).
-    var siegerModus = function(sieg)
+    //won mode
+    //Waiting for space to come in the standard mode and to load next level - (responds to the space bar).
+    var wonMode = function(winn)
     {
-        if(sieg.keyCode === 32)
+        if(winn.keyCode === 32)
         {
                 document.onkeydown = standard;
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 document.getElementById('score2').innerHTML = ("SCORE: " + score2);
-                document.getElementById('nextlvl').innerHTML = "";
-                leben = 3;
-                leben2 = 3;
+                document.getElementById('nextLvl').innerHTML = "";
+                life = 3;
+                life2 = 3;
                 currentLevel++;
                 if(currentLevel >= level.length) 
                 {
-                    document.getElementById('nextlvl').innerHTML = ("MAX LVL REACHED");  
+                    document.getElementById('nextLvl').innerHTML = ("MAX LVL REACHED");
                     return;
                 }
                 map = level[currentLevel].map;
@@ -376,16 +358,16 @@
                 highscore = highscore + score;
                 highscore2 = highscore2 + score2;
         }
-        
-        //Versteckte möglichkeit im Siegermodus auch manuel das Level zu ändern. 
-        //Mit 1 das erste Lvl, mit 2 das zweite usw...
-        else if(sieg.keyCode === 49) 
+
+        //Hidden possibility in the winning mode also manuel to change the level.
+        //With 1 the first Lvl, with 2 the second etc ...
+        else if(winn.keyCode === 49)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 0;
-            leben = 3;
-            leben2 = 3;
+            life = 3;
+            life2 = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             pacman2 = level[currentLevel].pacman2;
@@ -396,13 +378,13 @@
             score = 0;
             score2 = 0;
         }
-        else if(sieg.keyCode === 50)
+        else if(winn.keyCode === 50)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 1;
-            leben = 3;
-            leben2 = 3;
+            life = 3;
+            life2 = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             pacman2 = level[currentLevel].pacman2;
@@ -413,13 +395,13 @@
             score = 0;
             score2 = 0;
         }
-        else if(sieg.keyCode === 51)
+        else if(winn.keyCode === 51)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 2;
-            leben = 3;
-            leben2 = 3;
+            life = 3;
+            life2 = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             pacman2 = level[currentLevel].pacman2;

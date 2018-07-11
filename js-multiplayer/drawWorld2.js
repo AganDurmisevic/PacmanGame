@@ -1,22 +1,21 @@
 var map = level[currentLevel].map;
-//Die Function malt den Inhalt des Spieles
 function drawWorld() 
 	{
-        //Multiplayer Spielfeld erschaffen
-        document.getElementById('level-anzeige-text').innerHTML = ("LEVEL: ");
-        document.getElementById('level-anzeige-zahl').innerHTML =(currentLevel+1);
-        herzenMalenMulti();
+        //create multiplayer map
+        document.getElementById('level-show-text').innerHTML = ("LEVEL: ");
+        document.getElementById('level-show-number').innerHTML =(currentLevel+1);
+        heartsDrawMulti();
 		document.getElementById('world').innerHTML = "";
 		for(var y = 0; y < map.length; y = y + 1)
         {
             for(var x = 0; x < map[y].length; x = x + 1) 
             {
-                //Mauer
+                //Wall
                 if (map[y][x] === 1) 
                 {
                     document.getElementById('world').innerHTML += "<div class='wall'></div>";
                 }
-                //Mauer
+                //Wall
                 else if (map[y][x] === 7) 
                 {
 
@@ -26,17 +25,17 @@ function drawWorld()
                 {
                     document.getElementById('world').innerHTML += "<div class='coin'></div>";
                 }
-                //Essen
+                //Food
                 else if (map[y][x] === 6) 
                 {
                     document.getElementById('world').innerHTML += "<div class='coin2'></div>";
                 }
-                //Essen
+                //Food
                 else if (map[y][x] === 4) 
                 {
                     document.getElementById('world').innerHTML += "<div class='coin1'></div>";
                 }
-                //Grund
+                //Ground
                 else if (map[y][x] === 3) 
                 {
                     document.getElementById('world').innerHTML += "<div class='ground'></div>";
@@ -44,7 +43,7 @@ function drawWorld()
                 //PACMAN 
                 else if (map[y][x] === 5) 
                 {
-                    document.getElementById('world').innerHTML += "<div class='pacman-bg'><div class='pacman' id='pacman'><div class='pacman-top'><div class='pacman-lied'><div class='pacman-auge'></div></div></div><div class='pacman-bottom'></div></div></div>";
+                    document.getElementById('world').innerHTML += "<div class='pacman-bg'><div class='pacman' id='pacman'><div class='pacman-top'><div class='pacman-eyes'><div class='pacman-eye'></div></div></div><div class='pacman-bottom'></div></div></div>";
                     if(pacman.direction !== "") 
                     {
                         document.getElementById('pacman').classList.add(pacman.direction);
@@ -53,32 +52,34 @@ function drawWorld()
                 //PACMAN2 
                 else if (map[y][x] === 12) 
                 {
-                    document.getElementById('world').innerHTML += "<div class='pacman-bg2'><div class='pacman2' id='pacman2'><div class='pacman-top2'><div class='pacman-lied2'><div class='pacman-auge2'></div></div></div><div class='pacman-bottom2'></div></div></div>";
+                    document.getElementById('world').innerHTML += "<div class='pacman-bg2'><div class='pacman2' id='pacman2'><div class='pacman-top2'><div class='pacman-eyes2'><div class='pacman-eye2'></div></div></div><div class='pacman-bottom2'></div></div></div>";
                     if(pacman2.direction !== "") 
                     {
                         document.getElementById('pacman2').classList.add(pacman2.direction);
                     }
                 }
-                //Roter Geist
+                //Red Ghost
                 else if (map[y][x] === 8) 
                 {
                     document.getElementById('world').innerHTML += "<div class='redGhost'></div>";
                 }
-                //Gelber Geist
+                //Yellow Ghost
                 else if (map[y][x] === 9) 
                 {
                     document.getElementById('world').innerHTML += "<div class='yellowGhost'></div>";
                 }
-                else if (map[y][x] == 10) 
+                //Green Ghost
+                else if (map[y][x] == 10)
                 {
                     document.getElementById('world').innerHTML += "<div class='greenGhost'></div>";
                 }
-                else if (map[y][x] == 11) 
+                //Pink Ghost
+                else (map[y][x] == 11)
                 {
                     document.getElementById('world').innerHTML += "<div class='pinkGhost'></div>";
                 }
             }
-             //Nächste Zeile
+             //next row
              document.getElementById('world').innerHTML += "<br>";
         }
 	}

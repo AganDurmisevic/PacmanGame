@@ -1,18 +1,17 @@
     // Hilfe bei der Zuweisung der Objekte:
-	// 1 = <div class='wall'></div>            Mauer
-	// 2 = <div class='coin'></div>            Essen     
-	// 3 = <div class='ground'></div>          Grund
-    // 4 = <div class='coin1'></div>           Essen
-	// 5 = <div class='pacman'></div>          Pacman(Gelb)
-    // 6 = <div class='coin2'></div>           Essen
-    // 7 = <div class='wallL'></div>           Mauer
-    // 8 = <div class='redGhost'></div>        Roter Geist
-    // 9 = <div class='yellowGhost'></div>     Gelber Geist
+	// 1 = <div class='wall'></div>            Wall
+	// 2 = <div class='coin'></div>            Food
+	// 3 = <div class='ground'></div>          Ground
+    // 4 = <div class='coin1'></div>           Food
+	// 5 = <div class='pacman'></div>          Pacman(Yellow)
+    // 6 = <div class='coin2'></div>           Food
+    // 7 = <div class='wallL'></div>           Wall
+    // 8 = <div class='redGhost'></div>        Red Ghost
+    // 9 = <div class='yellowGhost'></div>     Yellow Ghost
 
-/*
-    Ein Array der die Levels beinhaltet und hängt mit CurrentLevel zusammen und function gewonnen bzw. KeyListener(Space).
-    Wird CurrentArray größer nach der betätigung der Taste Space, wird die nächtste Stelle des Arrays geladen (neuer Level). 
-*/
+
+    //An array that contains the levels and is related to CurrentLevel and function won or KeyListener (Space).
+    //If CurrentArray becomes larger after the operation of the Space key, the next digit of the array is loaded (newer level).
 var level = 
     [
         //Level 1 (Array [0])
@@ -37,28 +36,28 @@ var level =
                     id: 8,
                     x: 14,
                     y: 1,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             yellowGhost: 
                 {
                     id: 9,
                     x: 6,
                     y: 3,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             greenGhost: 
                 {
                     id: 10,
                     x: 1,
                     y: 3,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pinkGhost: 
                 {
                     id: 11,
                     x: 8,
                     y: 2,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pacman2: 
                 {
@@ -99,28 +98,28 @@ var level =
                     id: 8,
                     x: 14,
                     y: 1,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             yellowGhost:
                 {
                     id: 9,
                     x:2,
                     y:1,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             greenGhost: 
                 {
                     id: 10,
                     x: 5,
                     y: 1,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pinkGhost: 
                 {
                     id: 11,
                     x: 7,
                     y: 1,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pacman2: 
                 {
@@ -162,7 +161,7 @@ var level =
                   id: 8,
                   x: 2,
                   y: 4,
-                  feldHinterDenGeist: 3
+                  fieldBehindTheGhost: 3
               },
             yellowGhost:
                 {
@@ -175,14 +174,14 @@ var level =
                     id: 10,
                     x: 10,
                     y: 2,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pinkGhost: 
                 {
                     id: 11,
                     x: 8,
                     y: 5,
-                    feldHinterDenGeist: 3
+                    fieldBehindTheGhost: 3
                 },
             pacman2: 
                 {

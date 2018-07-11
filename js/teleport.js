@@ -1,4 +1,4 @@
-//Teleportiert denn Geist wenn er durch Tunnel geht auf der linken Seite.  
+//Teleports for Pacman if he goes through tunnels on the left side.
 function newPositionLeft()
 {   
     map[pacman.y][pacman.x] = 3;
@@ -7,7 +7,7 @@ function newPositionLeft()
     drawWorld();
 }
 
-//Teleportiert denn Geist wenn er durch Tunnel geht auf der rechten Seite. 
+//Teleports for Pacman if he goes through tunnels on the right side.
 function newPositionRight()
 {   
     map[pacman.y][pacman.x] = 3;
@@ -16,7 +16,7 @@ function newPositionRight()
     drawWorld();
 }
 
-//Teleportiert denn Pacman wenn er leben abgezogen bekommt zu Anfangskoordinaten. 
+// Teleports for Pacman when he gets deducted life to start coordinates.
 function newPosition()
 {
     pacman.x = 2;
@@ -24,7 +24,7 @@ function newPosition()
     drawWorld();
 }
 
-//Teleportiert denn Pacman2 wenn er leben abgezogen bekommt zu Anfangskoordinaten.
+//Teleports for Pacman2 if he gets deducted live! He gets to start coordinates.
 function newPosition2()
 {
     pacman2.x = 4;

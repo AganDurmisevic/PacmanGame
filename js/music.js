@@ -43,29 +43,18 @@ var die = new Howl({
     }
 }); 
 
-var platz = new Howl({
+var winner = new Howl({
     src: ['audio/waza.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
     onplay: function() 
     {
-        console.log('NeuePlatz');
+        console.log('NewPlatz');
     }
-}); 
+});
 
-var sieg = new Howl({
-    src: ['audio/siren.mp3'],
-    preload: true,
-    volume: 0.9,
-    autoplay: false,
-    onplay: function() 
-    {
-        console.log('Sieg');
-    }
-}); 
-
-var geister = new Howl({
+var ghosts = new Howl({
     src: ['audio/eat-ghost.mp3'],
     preload: true,
     volume: 0.9,
@@ -76,14 +65,14 @@ var geister = new Howl({
     }
 }); 
 
-var pause = new Howl({
+var paused = new Howl({
     src: ['audio/extra-life.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
     onplay: function() 
     {
-        console.log('Die');
+        console.log('paused');
     }
 }); 
 

@@ -1,7 +1,7 @@
 function localStorageHighscore() 
 {
     var oldStatus = window.localStorage.getItem('highscores');
-    var result = {Player: anzahlDerSpieler, Score: highscore}
+    var result = {Player: numberOfGames, Score: highscore}
     var highscores = oldStatus ? JSON.parse(oldStatus) : [];
     
     highscores.push(result)
@@ -17,7 +17,7 @@ function localStorageHighscore()
     {
         if(retrievedScores[i] !== undefined)
         {
-            anzahlDerSpieler += 1;   
+            numberOfGames += 1;
             hsTable.innerHTML += '<ol><li>' + "Player: " + retrievedScores[i].Player + '</li><li>' + "Highscore: " + retrievedScores[i].Score + '</li></ol>'
         }
     }

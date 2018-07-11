@@ -1,25 +1,25 @@
-    // Erklärung für die Map:
-    // 1 = <div class='wall'></div>            Mauer
-	// 2 = <div class='coin'></div>            Essen     
-	// 3 = <div class='ground'></div>          Grund
-    // 4 = <div class='coin1'></div>           Essen
-	// 5 = <div class='pacman'></div>          Pacman(Gelb)
-    // 6 = <div class='coin2'></div>           Essen
-    // 7 = <div class='wallL'></div>           Mauer
-    // 8 = <div class='redGhost'></div>        Roter Geist
-    // 9 = <div class='yellowGhost'></div>     Gelber Geist
+    // Map:
+    // 1 = <div class='wall'></div>            Wall
+	// 2 = <div class='coin'></div>            Food
+	// 3 = <div class='ground'></div>          Ground
+    // 4 = <div class='coin1'></div>           Food
+	// 5 = <div class='pacman'></div>          Pacman(Yellow)
+    // 6 = <div class='coin2'></div>           Food
+    // 7 = <div class='wallL'></div>           Wall
+    // 8 = <div class='redGhost'></div>        Red Ghost
+    // 9 = <div class='yellowGhost'></div>     Yellow Ghost
 
-    //Standardmodus bzw. Spielmodus
-    //Wartet auf Tastatur angaben um Pacman zu Steuern.
+    //Standard mode / Game mode
+    //Waiting on keyboard input to control Pacman.
     var standard = function(e) 
     {
             moveGhost(e);
             /**
-                Wenn <- gedrückt wird dann läuft der Pacman nach Links, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
+                If <- is pressed then the Pacman runs to the left, but only if there are no obstacles in front of him, otherwise he gets points when he meets 'fruits'.
             */
 			if (e.keyCode === 37)
             {
-                // dreht den Pacman um 180deg weil er anfangs nach Rechts guckt.
+                // turns the Pacman 180deg because he starts to look to the right.
                 pacman.direction = 'turn-180';
                 if(map[pacman.y][pacman.x-1] !== 1 && map[pacman.y][pacman.x-1] !== 7)
                 {
@@ -38,26 +38,26 @@
                         score = score + 40;
                         eat.play();
                     }
-                    if(currentLevel > 0 && map[pacman.y][pacman.x] == map[3][0])
+                    if(currentLevel > 0 && map[pacman.y][pacman.x] === map[3][0])
                     {
-                        newPositionLeft();  
-                        platz.play();
+                        newPositionLeft();
+                        winner.play();
                     }
                     document.getElementById('score').innerHTML = ("SCORE: " + score);
                     moveLeft(pacman);
-                    verloren();
-                    gewonnen();
+                    lose();
+                    won();
                 }
                 drawWorld();
             }
         
             /**   
                      ^
-                Wenn | gedrückt wird dann läuft der Pacman nach Oben, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
+                  If | is pressed then the Pacman runs to the top, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
             */
 			else if (e.keyCode === 38)
             {
-            // dreht den Pacman um 270deg weil er anfangs nach rechts guckt und 90deg ihn nach unten dreht.
+            // Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
             pacman.direction = 'turn-270';
             if (map[pacman.y-1][pacman.x] !== 1 && map[pacman.y-1][pacman.x] !== 7)
             {
@@ -78,18 +78,18 @@
                 }
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 moveUp(pacman);
-                gewonnen();
-                verloren();
+                won();
+                lose();
                 }
                 drawWorld();
             }
         
             /**
-                Wenn -> gedrückt wird dann läuft der Pacman nach Rechts, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
+                If -> is pressed then the Pacman runs to the right, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
             */
 			else if (e.keyCode === 39)
             {
-            //direction ist leer weil nach Rechts gucken Standard ist (unveränderter zustand).
+            //direction is empty because looking to the right is default (unchanged state).
             pacman.direction = '';
             if(map[pacman.y][pacman.x+1] !== 1 && map[pacman.y][pacman.x+1] !== 7)
             {
@@ -103,26 +103,26 @@
                     score = score + 40;
                     eatPill.play();
                 }
-                if(currentLevel > 0 && map[pacman.y][pacman.x] == map[9][19])
+                if(currentLevel > 0 && map[pacman.y][pacman.x] === map[9][19])
                 {
                     newPositionRight(); 
-                    platz.play();
+                    winner.play();
                 }
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 moveRight(pacman);
-                gewonnen();
-                verloren();
+                won();
+                lose();
             }
             drawWorld();
             }
         
             /** 
                      |
-                Wenn v gedrückt wird dann läuft der Pacman nach Unten, aber nur wenn vor ihm keine Hindernisse sind, ansonsten wenn er auf 'Früchte' trifft bekommt er Punkte.
+                  If v is pressed then the Pacman runs down, but only if there are no obstacles in front of him, otherwise he gets points when he hits fruits.
             */
 			else if (e.keyCode === 40)
             {
-            // dreht den Pacman um 90deg (nach Unten) weil er anfangs nach rechts guckt.
+            //Turn the Pacman 90deg (down) because it starts to look right.
             pacman.direction = 'turn-90';
                 if(map[pacman.y+1][pacman.x] !== 1 && map[pacman.y+1][pacman.x] !== 7)
                 {
@@ -138,65 +138,64 @@
                     }
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
                 moveDown(pacman);
-                gewonnen();
-                verloren();
+                won();
+                lose();
                 }
                 drawWorld();
             }
         
-            /** 
-                Wenn Enter('13') gedrückt wird dann wechselt das Spiel in Pausenmodus und ignoriert den    EventListener in den Standardmodus (damit man in der Pause nicht Steuern kann) und        schreibt das man Pausiert hat.
+            /**
+                If Enter ('13 ') is pressed then the game switches to pause mode and ignores the EventListener in standard mode (so that you can not control during the break) and writes that you have paused.
             */
             else if(e.keyCode === 13)
             {
                 document.onkeydown = pause;
                 document.getElementById('score').innerHTML = ("PAUSED");
-                 //document.getElementById("container").classList.add('pacman-paused');
             }
             
             /**
-                Wenn R('82') gedrückt wird und function verloren() true liefert
-                wird das Level Spiel erneuert.
+                 When R ('82 ') is pressed and function lose()  return true
+                 the level game will be reaped.
             */
-            else if(e.keyCode === 82 && verloren())
+            else if(e.keyCode === 82 && lose())
             {
-                document.onkeydown = neuAnfang;
+                document.onkeydown = newStart;
                 sound.play();
             }
         
             /**
-                Wenn Space('32') gedrückt wird und function gewonnen() true liefert
-                wird das Level erhöht bzw. Map, Pacman usw. auch neu geladen falls das neue Level 
-                existiert, ansonsten kommt die Nachticht das man das Maximale-Level erreicht hat.
+                 When Space ('32') is pressed and function won() returns true
+                 the level is increased resp. Map, Pacman etc. also loaded new if the new level
+                 exists, otherwise comes the Message that you have reached the maximum level.
             */
-            if(gewonnen()) 
+            if(won())
             { 
-                sieg.play();
-                document.onkeydown = siegerModus;
+                winner.play();
+                document.onkeydown = wonMode;
                 drawWorld();
             }
         drawWorld();
     }
     
-    //Pausemodus 
-    //Wartet auf Enter eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen - (reagiert nur auf Entertaste).
+    //paused mode
+    //Wait of Enter(13) key to change the mode or enter standard mode - (responds only to the Enter key).
     var pause = function(e) 
     {
         if(e.keyCode === 13)
         {
             document.onkeydown = standard;
             document.getElementById('score').innerHTML = ("SCORE: " + score);
-            pause.play();
+            paused.play();
         }
         drawWorld();
     }
     
     
-    //Verlorenmodus 
-    //Wartet auf R eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen und von anfang an anzufangen - (reagiert nur auf R).
-    var neuAnfang = function(anfang)
+    //lose mode
+    //Wait for R to change the mode or to go into standard mode and start from the beginning - (responds only to R).
+    var newStart = function(start)
     {
-        if(anfang.keyCode === 82)
+        if(start.keyCode === 82)
         {
             document.onkeydown = standard;
             javascript:location.reload();
@@ -205,61 +204,63 @@
         drawWorld();
     }
     
-    //Siegermodus 
-    //Wartet auf Leertasten eingabe um den Modus zu ändern bzw. in Standardmodus zu kommen um nächste Level zu laden - (reagiert dafür auf die Leertaste).
-    var siegerModus = function(sieg)
+    //won mode
+    //Waiting for space key to change the mode or come in the standard mode to load next level - (responds to the space bar).
+    var wonMode = function(winn)
     {
-        if(sieg.keyCode === 32)
+        if(winn.keyCode === 32)
         {
                 document.onkeydown = standard;
                 document.getElementById('score').innerHTML = ("SCORE: " + score);
-                document.getElementById('nextlvl').innerHTML = "";
-                leben = 3;
+                document.getElementById('nextLvl').innerHTML = "";
+                life = 3;
                 currentLevel++;
                 if(currentLevel >= level.length) 
                 {
-                    document.getElementById('nextlvl').innerHTML = ("MAX LVL REACHED");  
+                    document.getElementById('nextLvl').innerHTML = ("MAX LVL REACHED");
                     return;
                 }
                 map = level[currentLevel].map;
                 pacman = level[currentLevel].pacman;
                 redGhost = level[currentLevel].redGhost;
                 yellowGhost = level[currentLevel].yellowGhost;
+                pinkGhost = level[currentLevel].pinkGhost;
+                greenGhost = level[currentLevel].greenGhost;
                 highscore = highscore + score;
         }
-        
-        //Versteckte möglichkeit im Siegermodus auch manuel das Level zu ändern. 
-        //Mit 1 das erste Lvl, mit 2 das zweite usw...
-        else if(sieg.keyCode === 49) 
+
+        //Hidden possibility in the won mode to change the level.
+        //With 1 the first Lvl, with 2 the second etc ...
+        else if(winn.keyCode === 49)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 0;
-            leben = 3;
+            life = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             redGhost = level[currentLevel].redGhost;
             yellowGhost = level[currentLevel].yellowGhost;
             score = 0;
         }
-        else if(sieg.keyCode === 50)
+        else if(winn.keyCode === 50)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 1;
-            leben = 3;
+            life = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             redGhost = level[currentLevel].redGhost;
             yellowGhost = level[currentLevel].yellowGhost;
             score = 0;
         }
-        else if(sieg.keyCode === 51)
+        else if(winn.keyCode === 51)
         {
-            document.getElementById('nextlvl').innerHTML = "";
+            document.getElementById('nextLvl').innerHTML = "";
             document.onkeydown = standard;
             currentLevel = 2;
-            leben = 3;
+            life = 3;
             map = level[currentLevel].map;
             pacman = level[currentLevel].pacman;
             redGhost = level[currentLevel].redGhost;
