@@ -9,7 +9,7 @@
     // 8 = <div class='redGhost'></div>        Red Ghost
     // 9 = <div class='yellowGhost'></div>     Yellow Ghost
 
-var level = 
+var level =
     [
         //Level 1 (Array [0])
         {

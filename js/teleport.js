@@ -6,13 +6,26 @@ function newPositionLeft()
     pacman.y = 9;
     drawWorld();
 }
-
+function newPositionLeft2()
+{
+    map[pacman2.y][pacman2.x] = 3;
+    pacman2.x = 19;
+    pacman2.y = 9;
+    drawWorld();
+}
 //Teleports for Pacman if he goes through tunnels on the right side.
 function newPositionRight()
 {   
     map[pacman.y][pacman.x] = 3;
     pacman.x = 0;
     pacman.y = 3;
+    drawWorld();
+}
+function newPositionRight2()
+{
+    map[pacman2.y][pacman2.x] = 3;
+    pacman2.x = 0;
+    pacman2.y = 3;
     drawWorld();
 }
 

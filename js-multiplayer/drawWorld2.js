@@ -69,12 +69,12 @@ function drawWorld()
                     document.getElementById('world').innerHTML += "<div class='yellowGhost'></div>";
                 }
                 //Green Ghost
-                else if (map[y][x] == 10)
+                else if (map[y][x] === 10)
                 {
                     document.getElementById('world').innerHTML += "<div class='greenGhost'></div>";
                 }
                 //Pink Ghost
-                else (map[y][x] == 11)
+                else if (map[y][x] === 11)
                 {
                     document.getElementById('world').innerHTML += "<div class='pinkGhost'></div>";
                 }

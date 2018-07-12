@@ -24,7 +24,6 @@
     var greenGhost = level[currentLevel].greenGhost;
     var pinkGhost = level[currentLevel].pinkGhost;
 
-
     var fieldBehindTheGhost = 3;
 
 

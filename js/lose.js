@@ -4,24 +4,23 @@
  */
 function lose()
 {
-   if(!won() && pacman.y === redGhost.y && pacman.x === redGhost.x)
+    if(!won() && pacman.y === redGhost.y && pacman.x === redGhost.x)
+    {
+        ghosts.play();
+        newPosition();
+        drawWorld();
+        life -= 1;
+        heartsDraw();
+        drawWorld();
+        if(life === 0)
         {
-            ghosts.play();
-            newPosition();
-            drawWorld();
-            life -= 1;
-            heartsDraw();
-            drawWorld();
-            if(life === 0)
-            {
-                die.play();
-                highscore += score;
-                localStorageHighscore();
-                document.getElementById('score').innerHTML = "DEAD, PRESS R TO RESTART";
-                document.onkeydown = newStart;
-                return true;
-            }
+            die.play();
+            highscore += score;
+            document.getElementById('score').innerHTML = "DEAD, PRESS R TO RESTART";
+            document.onkeydown = newStart;
+            return true;
         }
+    }
     else if (!won() && pacman.y === yellowGhost.y && pacman.x === yellowGhost.x)
     {
         ghosts.play();
@@ -34,7 +33,6 @@ function lose()
         {
             die.play();
             highscore += score;
-            localStorageHighscore();
             document.getElementById('score').innerHTML = "DEAD, PRESS R TO RESTART";
             document.onkeydown = newStart;
             return true;
@@ -52,7 +50,6 @@ function lose()
         {
             die.play();
             highscore += score;
-            localStorageHighscore();
             document.getElementById('score').innerHTML = "DEAD, PRESS R TO RESTART";
             document.onkeydown = newStart;
             return true;
@@ -68,9 +65,9 @@ function lose()
         drawWorld();
     if(life === 0)
         {
+            localStorageHighscore();
             die.play();
             highscore += score;
-            localStorageHighscore();
             document.getElementById('score').innerHTML = "DEAD, PRESS R TO RESTART";
             document.onkeydown = newStart;
             return true;

@@ -12,7 +12,6 @@
 			left: 0;
             overflow-y: hidden;
 		}
-
         /* Navigation start */
 		nav {
             position: absolute;
@@ -621,7 +620,6 @@
                 left: 0;
                 top: 0;
             }
-            
             /* Navigation start */
             nav {
                 position: absolute;

@@ -46,6 +46,7 @@
                     if(currentLevel > 0 && map[pacman.y][pacman.x] === map[3][0])
                     {
                         newPositionLeft();
+                        drawWorld();
                         winner.play();
                     }
                     document.getElementById('score').innerHTML = ("SCORE: " + score);
@@ -53,6 +54,7 @@
                     drawWorld();
                     loseMulti();
                     wonMulti();
+                    drawWorld();
                 }
                 drawWorld();
             }
@@ -172,7 +174,7 @@
                     }
                     if(currentLevel > 0 && map[pacman2.y][pacman2.x] === map[3][0])
                     {
-                        newPositionLeft();   
+                        newPositionLeft2();
                         winner.play();
                     }
                     document.getElementById('score2').innerHTML = ("SCORE: " + score2);
@@ -232,7 +234,7 @@
                 }
                 if(currentLevel > 0 && map[pacman2.y][pacman2.x] === map[9][19])
                 {
-                    newPositionRight();
+                    newPositionRight2();
                     winner.play();
                 }
                 document.getElementById('score2').innerHTML = ("SCORE: " + score2);
@@ -279,15 +281,13 @@
                 document.getElementById('score2').innerHTML = ("PAUSED");
                 //document.getElementById("container").classList.add('pacman-paused');
             }
-            /**
-                Wenn R('82') gedrückt wird und function lose() true liefert
-                wird das Level Game ernewert.
-            */
+
+            //When R ('82 ') is pressed and function lose() returns true the level game will be reaped.
             else if(e.keyCode === 82 && loseMulti())
             {
                 document.onkeydown = newStart;
             }
-            // Bei 2x drücken von -- wird automatisch new gestartet (ohne einer Bedingung).
+            // Press twice to - automatically starts new (without a condition).
             if(e.keyCode === 189)
             {
                 document.onkeydown = newStart;

@@ -27,6 +27,7 @@
             text-align: center;
             border: 1px solid white;
             border-radius: 1rem;
+            font-family: 'Monoton', cursive;
             box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
         }
         a {
@@ -209,7 +210,7 @@
               position: relative;
               margin-top: 8px;
         }
-        .pacman-eyes{
+        .pacman-eyes {
             position: absolute;
             width: 13px;
             height: 13px;
@@ -219,7 +220,7 @@
             border-radius: 50%;
             border: .5px solid black;
         }
-        .pacman-eye{
+        .pacman-eye {
             background-color: red;
             width: 7px;
             height: 7px;
@@ -237,7 +238,6 @@
               position: relative;
               margin-top: -4px;
         }
-
         /* Extra class start */
         .pacman-paused {
             width: 50px;
@@ -514,6 +514,16 @@
                 1%{transform: rotate(-90deg);}
                 100%{transform: rotate(90deg);}
         }
+            @keyframes flicker {
+                0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+
+                    opacity: .99;
+
+                }
+                20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                    opacity: 0.4;
+                }
+            }
         /* Pacman (animation) end */
         }
         
@@ -568,42 +578,42 @@
                 text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
             }
             #level-show {
-            position: absolute;
-            left: 60rem;
-            top: 5px;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 44px;
-            width: 14rem;
-            height: 4rem;
-            color: white;
-            z-index: 15;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-        }
+                position: absolute;
+                left: 60rem;
+                top: 5px;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 44px;
+                width: 14rem;
+                height: 4rem;
+                color: white;
+                z-index: 15;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            }
             #level-show-text {
-            position: absolute;
-            left: 0;
-            top: 5px;
-            text-align: left;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 24px;
-            width: 250px;
-            height: 55px;
-            color: white;
-            z-index: 17;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
-        }
+                position: absolute;
+                left: 0;
+                top: 5px;
+                text-align: left;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 24px;
+                width: 250px;
+                height: 55px;
+                color: white;
+                z-index: 17;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            }
             #level-show-number {
-            position: absolute;
-            left: 110px;
-            top: -30px;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 45px;
-            width: 70px;
-            height: 55px;
-            color: white;
-            z-index: 19;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
-        }
+                position: absolute;
+                left: 110px;
+                top: -30px;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 45px;
+                width: 70px;
+                height: 55px;
+                color: white;
+                z-index: 19;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            }
 
             #hearts {
                 position: absolute;
@@ -855,6 +865,17 @@
             }
             #clear {
                 left:  50px;
+            }
+
+            @keyframes flicker {
+                0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+                //text-shadow: none;
+                    opacity: .99;
+
+                }
+                20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                    opacity: 0.1;
+                }
             }
             /* Game end */
         }

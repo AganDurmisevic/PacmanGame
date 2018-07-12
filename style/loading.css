@@ -1,26 +1,43 @@
     html, body {
           margin: 0;
           padding: 0;
-          background-color: #2B3D51;
           overflow-x: hidden;
           overflow-y: hidden;
     }
-
-    /* Text start */
-    p {
-      color: #E9E8FE;
-      font: 50px 'Futura', 'Press Start 2P',  cursive;
-      position: absolute;
-      text-align: center;
-      margin-top: 20%;
-      padding-top: 5%;;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
-    overflow-y: hidden;
+    body{
+        background: #39485E;
     }
-    /* Text end */
+
+    /* Text start and animation */
+    .neon{
+        font-family: 'Monoton', cursive;
+        font-size:130px;
+        color: #FFD5FF;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 400;
+        letter-spacing: 8px;
+        text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+    }
+    .flicker-slow{
+        animation: flicker 3s linear infinite;
+    }
+    .flicker-fast{
+        animation: flicker 1s linear infinite;
+    }
+    @keyframes flicker {
+        0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        //text-shadow: none;
+            opacity: .99;
+
+        }
+        20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+            opacity: 0.4;
+        }
+    }
+    /* Text and animation end */
 
     /* Pacman start */
     .pacman {
@@ -31,14 +48,14 @@
       margin-left: 30%;
 }
     .pacman-top {
-      background-color: yellow;
+      background-color: gold;
       height: 100px;
       width: 200px;
       border-radius: 100px 100px 0 0;
       animation: spin1 0.5s infinite linear;
 }
     .pacman-bottom{
-      background-color: yellow;
+      background-color: gold;
       height: 100px;
       width: 200px;
       border-radius:0 0 100px 100px;
@@ -48,15 +65,15 @@
 
     /* Food start */
     .feed {
-    margin-top: -185px;
-    margin-left: 15px;
-    width: 45px;
-    height: 45px;
-    border-radius: 30%;
-    -moz-animation: eat 1s linear 0s infinite;
-    -webkit-animation: eat 1s linear 0s infinite;
-    animation: eat 1s linear 0s infinite;
-}  
+        margin-top: -185px;
+        margin-left: 15px;
+        width: 45px;
+        height: 45px;
+        border-radius: 30%;
+        -moz-animation: eat 1s linear 0s infinite;
+        -webkit-animation: eat 1s linear 0s infinite;
+        animation: eat 1s linear 0s infinite;
+    }
     /* Food end */
 
     /* Animation start */
@@ -143,4 +160,14 @@
           900px 65px 0 0 white, 
           1100px 65px 0 0 white;}
 }
+    @keyframes flicker {
+        0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        //text-shadow: none;
+            opacity: .99;
+
+        }
+        20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+            opacity: 0.4;
+        }
+    }
     /* Animation end */

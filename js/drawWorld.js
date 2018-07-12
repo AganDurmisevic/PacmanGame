@@ -78,4 +78,5 @@ function drawWorld()
 		 //next row
 		 document.getElementById('world').innerHTML += "<br>";
 	}
+    localStorageHighscore ();
 }
