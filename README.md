@@ -3,11 +3,11 @@
 
                                             //////// How to Play /////////
 
-                    Use arrow keys or (for Multiplay) W,A,S and D to move, Enter to pause, 2x - to Restart.
+               Use arrow keys or (for Multiplay) W,A,S and D to move, Enter to pause, Space for next Lvl.
 
-                                        Here are the parts that I implemented:
-                                     - Eat points and oranges to push your Score.
-                                      - Don't get eaten by ghosts or you'll die.
+                                        Here are the parts that I have implemented:
+                                        - Eat points and oranges to push your Score.
+                                        - Don't get eaten by ghosts or you'll die.
 
                                                Scoring is as follows:
                                            - 10 pts for each red points

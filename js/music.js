@@ -1,79 +1,99 @@
-// howler.js -> macht es einfacher die Musik abzuspielen 
-var sound = new Howl({
-    src: ['audio/ready.mp3'],
+// howler.js -> makes it easier to play the music.
+var sound = new Howl ({
+
+    src: [ 'audio/ready.mp3' ],
     preload: true,
     volume: 0.5,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('Play');
+    onplay: function () {
+
+        console.log( 'Play' );
+
     }
+
 }); 
 
-var eat = new Howl({
-    src: ['audio/eating.mp3'],
+var eat = new Howl ({
+
+    src: [ 'audio/eating.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('Eating');
+    onplay: function () {
+
+        console.log( 'Eating' );
+
     }
+
 }); 
 
-var eatPill = new Howl({
-    src: ['audio/eat-pill.mp3'],
+var eatPill = new Howl ({
+    src: [ 'audio/eat-pill.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('EatingPill');
+    onplay: function () {
+
+        console.log( 'EatingPill' );
+
     }
+
 }); 
 
-var die = new Howl({
-    src: ['audio/die.mp3'],
+var die = new Howl ({
+
+    src: [ 'audio/die.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('Die');
+    onplay: function () {
+
+        console.log( 'Die' );
+
     }
+
 }); 
 
-var winner = new Howl({
-    src: ['audio/waza.mp3'],
+var winner = new Howl ({
+
+    src: [ 'audio/waza.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('NewPlatz');
+    onplay: function () {
+
+        console.log( 'Good' );
+
     }
+
 });
 
-var ghosts = new Howl({
-    src: ['audio/eat-ghost.mp3'],
+var ghosts = new Howl ({
+
+    src: [ 'audio/eat-ghost.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('Die');
+    onplay: function () {
+
+        console.log( 'Ghosts' );
+
     }
+
 }); 
 
-var paused = new Howl({
-    src: ['audio/extra-life.mp3'],
+var paused = new Howl ({
+
+    src: [ 'audio/extra-life.mp3' ],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function() 
-    {
-        console.log('paused');
+    onplay: function () {
+
+        console.log( 'paused' );
+
     }
+
 }); 
 
-sound.play();
+sound.play ();

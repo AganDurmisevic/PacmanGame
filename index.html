@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <!-- Title -->
 	<title>PacMan</title>
     <meta charset="utf-8">
@@ -15,7 +17,9 @@
     <script type="text/javascript" src="js/onepage.js"></script>
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/music.js"></script>
+
 </head>
+
 <body>
     
     <!-- Text Container -->
@@ -34,43 +38,21 @@
     
     <!-- Pacman page start -->
     <div class="onepage"  id="Pacman">
-            <div id='container'>
-                <div id="life-score-container">
-                    <div id="hearts">
-                        <h2 id="life">LIFE :</h2>
-                        <div id="hearts-lvl">
-                        </div>
-                        <h2 id="score">SCORE: </h2>
-                        <div id="level-show">
-                            <h2 id="level-show-text">LEVEL: </h2>
-                            <h2 id="level-show-number"></h2>
-                        </div>
+        <div id='container'>
+            <div id="life-score-container">
+                <div id="hearts">
+                    <h2 id="life">LIFE :</h2>
+                    <div id="hearts-lvl"></div>
+                    <h2 id="score">SCORE: </h2>
+                    <div id="level-show">
+                        <h2 id="level-show-text">LEVEL: </h2>
+                        <h2 id="level-show-number"></h2>
                     </div>
                 </div>
-                <div id='world'>
-                <!-- ... -->
-                <!-- <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <br>
-                <div class='wall'></div>
-                <div class="pacman" id="pacman">
-                <div class='ground'></div>
-                <div class='coin'></div>
-                <div class='wall'></div>
-                <br>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                <div class='wall'></div>
-                -->
-                <!-- ... -->
-                </div>
             </div>
+            <div id='world'></div>
         </div>
+    </div>
     <!-- Pacman page end -->
         
     <!-- Highscore page start -->
@@ -78,8 +60,7 @@
         <div id="highscore">
             <h2 id="highscore-text">Highscore</h2>
             <div id="highscores">
-                <ol id="ol">
-                </ol>
+                <ol id="ol"></ol>
             </div>
             
             <button id="clear" onclick="clearStorage()">Clear All</button>
@@ -91,7 +72,7 @@
                 }
             </script>
         </div>
-        </div>
+    </div>
     <!-- Highscore page end -->
     
     <!-- JavaScript -->
@@ -106,5 +87,6 @@
     <script src="js/lose.js"></script>
     <script src="js/localStorage.js"></script>
     <script src="js/drawWorld.js"></script>
+
 </body>
 </html>

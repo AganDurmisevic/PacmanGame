@@ -23,12 +23,11 @@
     var yellowGhost = level[currentLevel].yellowGhost;
     var greenGhost = level[currentLevel].greenGhost;
     var pinkGhost = level[currentLevel].pinkGhost;
-
     var fieldBehindTheGhost = 3;
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        drawWorld();
+    document.addEventListener( 'DOMContentLoaded', function () {
+        drawWorld ();
         //setInterval(drawWorld, 500);
-    }, false);
+    }, false );
 

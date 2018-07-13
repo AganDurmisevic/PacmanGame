@@ -28,14 +28,14 @@
             border: 1px solid white;
             border-radius: 1rem;
             font-family: 'Monoton', cursive;
-            box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+            box-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         a {
             list-style: none;
             text-decoration: none;
             color: white;
             font-family: 'Futura', fantasy, sans-serif;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         li:hover {
             box-shadow: none;
@@ -43,9 +43,11 @@
         a:hover {
             text-shadow: none;
         }
+
         /* Navigation end */
 
         /* Onepage start */
+
         .onepage {
             height: 100%;
             margin: 0;
@@ -60,8 +62,13 @@
           top: 0;
           left: 0;
         }
+
         #Pacman {
-          background-color: #39485E;
+            background: linear-gradient(149deg, #35587e, #dde880, #4aa4d7, #ad7bdd, #e67eb0, #35587e);
+            background-size: 400% 400%;
+            -webkit-animation: backgroundColor 3s ease infinite;
+            -moz-animation: backgroundColor 3s ease infinite;
+            animation: backgroundColor 3s ease infinite;
         }
         #Highscore {
           background-color: #35587E;
@@ -70,6 +77,7 @@
         /* Onepage end */
 
         /* Game start */
+
         #container {
             overflow-x: hidden;
             overflow-y: hidden;
@@ -103,31 +111,31 @@
             z-index: 6;
             top: 70rem;
             text-align: right;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show {
             position: absolute;
             left: 149rem;
-            top: 5px;
+            top: 0;
             font-family: fantasy, monospace, sans-serif;
             font-size: 44px;
             width: 250px;
             height: 200px;
             color: white;
             z-index: 15;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show-text {
             position: absolute;
             left: 0;
-            top: 5px;
+            top: 3px;
             font-family: fantasy, monospace, sans-serif;
             font-size: 44px;
             width: 250px;
             height: 55px;
             color: white;
             z-index: 17;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show-number {
             position: absolute;
@@ -139,7 +147,7 @@
             height: 55px;
             color: white;
             z-index: 19;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
 
         #hearts {
@@ -170,7 +178,7 @@
             font-family: 'Futura', monospace, sans-serif;
             font-size: 25px;
             z-index: 6;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         .fa {
             z-index: 6;
@@ -184,7 +192,7 @@
             width: auto;
             height: auto;
             font-size: 35px;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #444, 0 0 10px #333;
             display: inline-block;
         }
 
@@ -238,7 +246,9 @@
               position: relative;
               margin-top: -4px;
         }
+
         /* Extra class start */
+
         .pacman-paused {
             width: 50px;
 			height: 50px;
@@ -439,6 +449,7 @@
         /* Pacman drehen end */
 
         /* Ghosts (animation) start */
+
         @keyframes ghosts{
 		  1%{
 		    transform: rotate(2deg);
@@ -450,9 +461,11 @@
 		    transform: rotate(2deg);
 		  }
 		}
+
         /* Ghosts (animation) start */
             
         /* Text (animation) start */
+
         @keyframes text {
                   10%{
                       margin-top: 35%;
@@ -463,10 +476,12 @@
                   30%{
                       margin-top: 35%;
                   }
-                } 
+                }
+
         /* Text (animation) end */
 
         /* Coins (animation) start */
+
         @keyframes coinsAnim {
                   10%{
                       transform: scale(0.9);
@@ -480,10 +495,32 @@
                   100%{
                       transform: scale(1);
                   }
-                } 
+                }
+
         /* Coins (animation) end */
-            
+
+        /* Background animation start */
+
+        @-webkit-keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+        @-moz-keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+        @keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+
+        /* Background animation ende */
+
         /* Pacman (animation) start */
+
 	    @keyframes spin1 {
                 0%  {transform: rotate(0deg);}
                 50%{transform: rotate(-45deg);}
@@ -514,16 +551,7 @@
                 1%{transform: rotate(-90deg);}
                 100%{transform: rotate(90deg);}
         }
-            @keyframes flicker {
-                0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
 
-                    opacity: .99;
-
-                }
-                20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-                    opacity: 0.4;
-                }
-            }
         /* Pacman (animation) end */
         }
         
@@ -537,6 +565,7 @@
             }
             
             /* Navigation start */
+
             nav {
                 position: absolute;
                 left: 30%; 
@@ -551,13 +580,20 @@
                 text-align: center;
                 border: .5px solid white;
                 border-radius: 1rem;
-                box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                box-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
             li:hover {
                 box-shadow: none;
             }
             a:hover {
                 text-shadow: none;
+            }
+            #Pacman {
+                background: linear-gradient(180deg, #3dc5a2, #e3770d, #dd9249, #91cc8b, #9b8ace, #d53c63);
+                background-size: 800% 800%;
+                -webkit-animation: AnimationName 59s ease infinite;
+                -moz-animation: AnimationName 59s ease infinite;
+                animation: AnimationName 59s ease infinite;
             }
             /* Navigation end */
             
@@ -575,7 +611,7 @@
                 z-index: 6;
                 top: 680px;
                 left: -70px;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
             #level-show {
                 position: absolute;
@@ -587,7 +623,7 @@
                 height: 4rem;
                 color: white;
                 z-index: 15;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
             #level-show-text {
                 position: absolute;
@@ -600,7 +636,7 @@
                 height: 55px;
                 color: white;
                 z-index: 17;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
             #level-show-number {
                 position: absolute;
@@ -612,7 +648,7 @@
                 height: 55px;
                 color: white;
                 z-index: 19;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
 
             #hearts {
@@ -637,7 +673,7 @@
                 font-family: 'Futura', monospace, sans-serif;
                 font-size: 22px;
                 z-index: 6;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             }
             .fa {
                 z-index: 6;
@@ -651,7 +687,7 @@
                 width: auto;
                 height: auto;
                 font-size: 28px;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
                 display: inline-block;
             }
 
@@ -668,7 +704,7 @@
                 position: relative;
                 padding-left: 3.2px;
             }
-            .pacman-top{
+            .pacman-top {
                   background-color: yellow;
                   max-height: 16px;
                   max-width: 28px;
@@ -677,7 +713,7 @@
                   position: relative;
                   margin-top: 6.4px;
             }
-            .pacman-eyes{
+            .pacman-eyes {
                 position: absolute;
                 max-width: 10.4px;
                 max-height: 10.4px;
@@ -687,7 +723,7 @@
                 border-radius: 50%;
                 border: .5px solid black;
             }
-            .pacman-eye{
+            .pacman-eye {
                 background-color: red;
                 max-width: 4.6px;
                 max-height: 4.6px;
@@ -707,6 +743,7 @@
             }
 
             /* Extra class start */
+
             .pacman-paused {
                 width: 50px;
                 height: 50px;
@@ -867,15 +904,25 @@
                 left:  50px;
             }
 
-            @keyframes flicker {
-                0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-                //text-shadow: none;
-                    opacity: .99;
+            /* Background animation start */
 
-                }
-                20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-                    opacity: 0.1;
-                }
+            @-webkit-keyframes AnimationName {
+                0%{background-position:56% 0%}
+                50%{background-position:45% 100%}
+                100%{background-position:56% 0%}
             }
+            @-moz-keyframes AnimationName {
+                0%{background-position:56% 0%}
+                50%{background-position:45% 100%}
+                100%{background-position:56% 0%}
+            }
+            @keyframes AnimationName {
+                0%{background-position:56% 0%}
+                50%{background-position:45% 100%}
+                100%{background-position:56% 0%}
+            }
+
+            /* Background animation ende */
+
             /* Game end */
         }
