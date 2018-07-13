@@ -47,18 +47,18 @@ function moveDown ( movement ) {
 
 }
 
-//Ghost(er)movement die darauf achtet nichts zu Food.
+//Ghost movements that are careful not to eat the fruit.
 function moveLeftCoin ( movement )  {
 
     if ( map[ movement.y ][ movement.x-1 ] !== 1) {
 
-        if(movement.fieldBehindTheGhost == 5) {
+        if(movement.fieldBehindTheGhost === 5) {
 
             movement.fieldBehindTheGhost = 3;
 
         }
 
-        else if( map[ movement.y ][ movement.x-1 ] == 2) {
+        if( map[ movement.y ][ movement.x-1 ] === 2) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.x -= 1;
@@ -67,7 +67,7 @@ function moveLeftCoin ( movement )  {
 
         }
 
-        else if( map[ movement.y ][ movement.x-1 ] == 6) {
+        if( map[ movement.y ][ movement.x-1 ] === 6) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.x -= 1;
@@ -89,7 +89,7 @@ function moveUpCoin ( movement ) {
             movement.fieldBehindTheGhost = 3;
         }
 
-        else if (map[ movement.y+1 ][ movement.x ] === 2) {
+        if (map[ movement.y+1 ][ movement.x ] === 2) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.y += 1;
@@ -97,7 +97,7 @@ function moveUpCoin ( movement ) {
             movement.fieldBehindTheGhost = 2;
         }
 
-        else if (map[ movement.y+1 ][ movement.x ] === 6) {
+        if (map[ movement.y+1 ][ movement.x ] === 6) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.y += 1;
@@ -120,7 +120,7 @@ function moveRightCoin( movement ) {
 
         }
 
-        else if ( map[ movement.y ][ movement.x+1 ] === 2 ) {
+        if ( map[ movement.y ][ movement.x+1 ] === 2 ) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.x += 1;
@@ -129,7 +129,7 @@ function moveRightCoin( movement ) {
 
         }
 
-        else if( map[ redGhost.y][redGhost.x+1] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6) {
+        if( map[ redGhost.y][redGhost.x+1] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.x += 1;
@@ -152,7 +152,7 @@ function moveDownCoin( movement ) {
 
         }
 
-        else if ( map[ movement.y-1 ][ movement.x ] === 2 ) {
+        if ( map[ movement.y-1 ][ movement.x ] === 2 ) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.y -= 1;
@@ -161,7 +161,7 @@ function moveDownCoin( movement ) {
 
         }
 
-        else if ( map[ movement.y-1 ][ movement.x ] === 6 ) {
+        if ( map[ movement.y-1 ][ movement.x ] === 6 ) {
 
             map[ movement.y ][ movement.x ] = movement.fieldBehindTheGhost;
             movement.y -= 1;

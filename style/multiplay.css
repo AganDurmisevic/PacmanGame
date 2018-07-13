@@ -3,6 +3,7 @@
         }
         
         /* Screen */
+
         @media only screen and (max-height: 1430px) {
         html, body {
             width: auto;
@@ -12,6 +13,7 @@
 			left: 0;
             overflow-y: hidden;
 		}
+
         /* Navigation start */
 		nav {
             position: absolute;
@@ -42,6 +44,7 @@
         a:hover {
             text-shadow: none;
         }
+
         /* Navigation end */
 
         /* Onepage start */
@@ -60,14 +63,44 @@
           left: 0;
         }
         #Multiplay {
-          background-color: #27357B;
+            background: linear-gradient(149deg, #333333, #35587e, #39485E, dimgray, #e67eb0, #35587e, #444444);
+            background-size: 300% 400%;
+            -webkit-animation: backgroundColor 3s ease infinite;
+            -moz-animation: backgroundColor 3s ease infinite;
+            animation: backgroundColor 3s ease infinite;
         }
         #Highscore {
-          background-color: #27357B;
+            background: linear-gradient(149deg, #333333, #35587e, #39485E, dimgray, #e67eb0, #35587e, #444444);
+            background-size: 300% 400%;
+            -webkit-animation: backgroundColor 3s ease infinite;
+            -moz-animation: backgroundColor 3s ease infinite;
+            animation: backgroundColor 3s ease infinite;
         }
+
         /* Onepage end */
 
+        /* Background animation start */
+
+        @-webkit-keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+        @-moz-keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+        @keyframes backgroundColor {
+            0%{background-position:0% 92%}
+            50%{background-position:100% 9%}
+            100%{background-position:0% 92%}
+        }
+
+        /* Background animation ende */
+
         /* Game start */
+
         #container {
             overflow-x: hidden;
             overflow-y: hidden;
@@ -101,7 +134,7 @@
             z-index: 6;
             top: 70rem;
             text-align: left;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #score2 {
             position: absolute;
@@ -113,7 +146,7 @@
             z-index: 6;
             top: 71rem;
             text-align: center;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show {
             position: absolute;
@@ -125,7 +158,7 @@
             height: 200px;
             color: white;
             z-index: 15;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show-text {
             position: absolute;
@@ -137,7 +170,7 @@
             height: 55px;
             color: white;
             z-index: 17;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #level-show-number {
             position: absolute;
@@ -149,7 +182,7 @@
             height: 55px;
             color: white;
             z-index: 19;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
 
         #hearts {
@@ -202,7 +235,7 @@
             font-size: 25px;
             margin-left: -10rem;
             z-index: 6;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         #life2 {
             width: 480px;
@@ -213,7 +246,7 @@
             font-size: 25px;
             margin-left: 10rem;
             z-index: 6;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         .fa {
             z-index: 6;
@@ -227,7 +260,7 @@
             width: auto;
             height: auto;
             font-size: 35px;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
             display: inline-block;
         }
 
@@ -332,6 +365,7 @@
         }
 
         /* Extra class start */
+
         .pacman-paused {
             width: 50px;
 			height: 50px;
@@ -350,6 +384,7 @@
               position: relative;
               margin-top: 25px;
         }
+
         /* Extra class end */
 
         .redGhost {
@@ -514,9 +549,11 @@
             color: #39485E;
             background: white;
         }
+
         /* Game end */
         
-        /* Pacman drehen start */
+        /* Pacman turn start */
+
         .turn-90 {  
             transform: rotate(90deg);   
 }
@@ -529,9 +566,11 @@
         .turn-360 {  
             transform: rotate(360deg); 
 }
-        /* Pacman drehen end */
+
+        /* Pacman turn end */
 
         /* Ghosts (animation) start */
+
         @keyframes ghosts{
 		  1%{
 		    transform: rotate(2deg);
@@ -543,9 +582,11 @@
 		    transform: rotate(2deg);
 		  }
 		}
+
         /* Ghosts (animation) start */
             
         /* Text (animation) start */
+
         @keyframes text {
                   10%{
                       margin-top: 35%;
@@ -556,10 +597,12 @@
                   30%{
                       margin-top: 35%;
                   }
-                } 
+                }
+
         /* Text (animation) end */
 
         /* Coins (animation) start */
+
         @keyframes coinsAnim {
                   10%{
                       transform: scale(0.9);
@@ -573,7 +616,8 @@
                   100%{
                       transform: scale(1);
                   }
-                } 
+                }
+
         /* Coins (animation) end */
             
         /* Pacman (animation) start */
@@ -604,52 +648,80 @@
         }
 
         @keyframes dead {
-                1%{transform: rotate(-90deg);}
-                100%{transform: rotate(90deg);}
+
+                1% {
+                    transform: rotate(-90deg);
+                }
+
+                100% {
+                    transform: rotate(90deg);
+                }
         }
         /* Pacman (animation) end */
         }
         
 
         /* Laptop */
-        @media only screen and (max-height: 830px) { 
+        @media only screen and (max-height: 830px) {
+
             html, body {
+
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;
+
             }
+
             /* Navigation start */
+
             nav {
+
                 position: absolute;
                 left: 30%; 
                 cursor: pointer;
                 z-index: 3;
                 margin-top: 1.1%;
+
             }
+
             li {
+
                 display: inline-block;
                 padding: .5rem;
                 margin: .5rem;
                 text-align: center;
                 border: .5px solid white;
                 border-radius: 1rem;
-                box-shadow: 0 0 2px #fff, 0 0 7px #fff, 0 0 12px #fff, 0 0 17px #228DFF, 0 0 32px #228DFF, 0 0 37px #228DFF, 0 0 47px #228DFF, 0 0 72px #228DFF;
+                box-shadow: 0 0 2px #fff, 0 0 7px #fff;
+
             }
+
             li:hover {
+
                 box-shadow: none;
+
             }
+
             a:hover {
+
                 text-shadow: none;
+
             }
+
             /* Navigation end */
             
             /* Game start */
+
             #life-score-container {
+
                 position: sticky;
+
             }
+
             #score {
+
                 position: relative;
                 height: auto;
                 color: white;
@@ -659,9 +731,12 @@
                 z-index: 6;
                 top: 710px;
                 left: -60px;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
             }
+
             #score2 {
+
                 position: relative;
                 height: auto;
                 color: white;
@@ -671,59 +746,75 @@
                 z-index: 6;
                 top: 665px;
                 left: -43%;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
             }
+
             #level-show {
-            position: absolute;
-            left: 60rem;
-            top: 5px;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 44px;
-            width: 14rem;
-            height: 4rem;
-            color: white;
-            z-index: 15;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-        }
+
+                position: absolute;
+                left: 60rem;
+                top: 5px;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 44px;
+                width: 14rem;
+                height: 4rem;
+                color: white;
+                z-index: 15;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
+            }
+
             #level-show-text {
-            position: absolute;
-            left: 120px;
-            top: 5px;
-            text-align: left;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 24px;
-            width: 100px;
-            height: 55px;
-            color: white;
-            z-index: 17;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
-        }
+
+                position: absolute;
+                left: 120px;
+                top: 5px;
+                text-align: left;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 24px;
+                width: 100px;
+                height: 55px;
+                color: white;
+                z-index: 17;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
+            }
+
             #level-show-number {
-            position: absolute;
-            left: 230px;
-            top: -30px;
-            font-family: fantasy, monospace, sans-serif;
-            font-size: 45px;
-            width: 70px;
-            height: 55px;
-            color: white;
-            z-index: 19;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;    
+                position: absolute;
+                left: 230px;
+                top: -30px;
+                font-family: fantasy, monospace, sans-serif;
+                font-size: 45px;
+                width: 70px;
+                height: 55px;
+                color: white;
+                z-index: 19;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
             }
 
             #hearts {
+
                 position: absolute;
                 display: flex;
                 flex-direction: row;
+
             }
+
             #hearts-lvl {
+
                 position: absolute;
                 width: 120px;
                 left: 10px;
                 display: inline-block;
                 margin-top: 2%;
+
             }
+
             #life {
+
                 width: auto;
                 height: auto;
                 left: 60px;
@@ -733,21 +824,30 @@
                 font-family: 'Futura', monospace, sans-serif;
                 font-size: 18px;
                 z-index: 6;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
             }
+
             #hearts2 {
+
                 position: absolute;
                 display: flex;
                 flex-direction: row;
+
             }
+
             #hearts-lvl2 {
+
                 position: absolute;
                 width: 120px;
                 left: 130px;
                 display: inline-block;
                 margin-top: 1%;
+
             }
+
             #life2 {
+
                 width: auto;
                 height: auto;
                 left: -140px;
@@ -757,37 +857,49 @@
                 font-family: 'Futura', monospace, sans-serif;
                 font-size: 18px;
                 z-index: 6;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+
             }
+
             .fa {
+
                 z-index: 6;
                 padding: 3%;
                 margin-left: 3%;
                 margin-top: 12%;
             }
+
             .fa-heart {
+
                 position: sticky;
                 color: red;
                 width: auto;
                 height: auto;
                 font-size: 23px;
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff;
                 display: inline-block;
+
             }
 
             .pacman-bg {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-color: transparent;
                 display: inline-block;
                 background-position: center;
                 background-size: cover;
+
             }
+
             .pacman {
+
                 position: relative;
                 padding-left: 3.2px;
             }
-            .pacman-top{
+
+            .pacman-top {
+
                   background-color: yellow;
                   max-height: 16px;
                   max-width: 28px;
@@ -795,8 +907,11 @@
                   animation: spin1 0.5s infinite linear;
                   position: relative;
                   margin-top: 6.4px;
+
             }
-            .pacman-eyes{
+
+            .pacman-eyes {
+
                 position: absolute;
                 max-width: 10.4px;
                 max-height: 10.4px;
@@ -805,8 +920,11 @@
                 margin-top: .8px;
                 border-radius: 50%;
                 border: .5px solid black;
+
             }
-            .pacman-eye{
+
+            .pacman-eye {
+
                 background-color: red;
                 max-width: 4.6px;
                 max-height: 4.6px;
@@ -814,39 +932,53 @@
                 margin-left: 2.4px;
                 margin-top: 2.4px;
                 border-radius: 50%;
+
             }
+
             .pacman-bottom {
-                  background-color: yellow;
-                  max-height: 16px;
-                  max-width: 28px;
-                  border-radius: 0 0 20px 20px;
-                  animation: spin2 0.5s infinite linear;
-                  position: relative;
-                  margin-top: -2px;
+
+                background-color: yellow;
+                max-height: 16px;
+                max-width: 28px;
+                border-radius: 0 0 20px 20px;
+                animation: spin2 0.5s infinite linear;
+                position: relative;
+                margin-top: -2px;
+
             }
             
             .pacman-bg2 {
-			width: 40px;
-			height: 40px;
-			background-color: transparent;
-			display: inline-block;
-            background-position: center;
-            background-size: cover;
+
+                width: 40px;
+                height: 40px;
+                background-color: transparent;
+                display: inline-block;
+                background-position: center;
+                background-size: cover;
+
             }
+
             .pacman2 {
+
                 position: relative;
                 padding-left: 3.2px;
+
             }
+
             .pacman-top2 {
-                  background-color: green;
-                  height: 16px;
-                  width: 28px;
-                  border-radius: 20px 20px 0 0;
-                  animation: spin1 .3s infinite linear;
-                  position: relative;
-                  margin-top: 6.4px;
+
+              background-color: green;
+              height: 16px;
+              width: 28px;
+              border-radius: 20px 20px 0 0;
+              animation: spin1 .3s infinite linear;
+              position: relative;
+              margin-top: 6.4px;
+
             }
+
             .pacman-eyes2 {
+
                 position: absolute;
                 width: 10.4px;
                 height: 10.4px;
@@ -855,8 +987,11 @@
                 margin-top: .8px;
                 border-radius: 50%;
                 border: .5px solid gray;
+
             }
+
             .pacman-eye2 {
+
                 background-color: green;
                 width: 4.6px;
                 height: 4.6px;
@@ -864,8 +999,11 @@
                 margin-left: 2.4px;
                 margin-top: 2.4px;
                 border-radius: 50%;
+
             }
+
             .pacman-bottom2 {
+
                   background-color: green;
                   height: 16px;
                   width: 28px;
@@ -873,29 +1011,39 @@
                   animation: spin2 .3s infinite linear;
                   position: relative;
                   margin-top: -2px;
+
             }
+
             /* Extra class start */
+
             .pacman-paused {
+
                 width: 50px;
                 height: 50px;
                 background-color: transparent;
                 display: inline-block;
                 background-position: center;
                 background-size: cover;
+
             }
+
             .pacman-dead {
-                  background-color: yellow;
-                  height: 100%;
-                  width: 100%;
-                  border-radius: 50%;
-                  top: -50%;
-                  animation: dead 2s infinite linear;
-                  position: relative;
-                  margin-top: 25px;
+
+                background-color: yellow;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                top: -50%;
+                animation: dead 2s infinite linear;
+                position: relative;
+                margin-top: 25px;
+
             }
+
             /* Extra class end */
 
             .redGhost {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/rot.png');
@@ -903,8 +1051,11 @@
                 background-position: center;
                 display: inline-block;
                 animation: ghosts 1s linear infinite;
+
             }
+
             .yellowGhost {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/gelb.png');
@@ -913,7 +1064,9 @@
                 display: inline-block;
                 animation: ghosts 1s linear infinite;
             }
+
             .pinkGhost {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/pink.png');
@@ -922,7 +1075,9 @@
                 display: inline-block;
                 animation: ghosts 1s linear infinite;
             }
+
             .greenGhost {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/blau.png');
@@ -930,16 +1085,22 @@
                 background-position: center;
                 display: inline-block;
                 animation: ghosts 1s linear infinite;
+
             }
+
             .wall {
+
                 max-height: 40px;
                 max-width: 40px;
                 background-image: url('../bilder/neon.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
+
             }
+
             .wallL {
+
                 max-height: 40px;
                 max-width: 40px;
                 background-image: url('../bilder/neon.png');
@@ -947,15 +1108,20 @@
                 background-size: cover;
                 display: inline-block;
             }
+
             .coin2 {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/orangen.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
+
             }
+
             .coin1 {
+
                 max-width: 40px;
                 max-height: 40px;
                 background-image: url('../bilder/point.png');
@@ -963,8 +1129,11 @@
                 background-size: cover;
                 display: inline-block;
                 animation: coinsAnim .5s infinite;
+
             }
+
             .coin {
+
                 max-height: 40px;
                 max-width: 40px;
                 background-image: url('../bilder/point.png');
@@ -972,56 +1141,71 @@
                 background-size: cover;
                 display: inline-block;
                 animation: coinsAnim .5s infinite;
+
             }
+
             .ground {
+
                 max-height: 40px;
                 max-width: 40px;
                 background-color: transparent;
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
+
             }
 
             #nextLvl {
-                    position: absolute;
-                    color: white;
-                    margin-top: 50%;
-                    margin-left: 30%;
-                    font-size: 1.5rem;
-                    text-align: center;
-                    font-weight: bolder;
-                    overflow-x: hidden;
-                    z-index: 10;
-                    animation: text 2s infinite;
-                }
+
+                position: absolute;
+                color: white;
+                margin-top: 50%;
+                margin-left: 30%;
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: bolder;
+                overflow-x: hidden;
+                z-index: 10;
+                animation: text 2s infinite;
+
+            }
             @keyframes text {
-                  40%{
-                      margin-top: 51%;
-                  }
-                  60%{
-                      margin-top: 50%;
-                  }
-                  80%{
-                      margin-top: 51%;
-                  }
-                } 
+
+              40%{
+                  margin-top: 51%;
+              }
+              60%{
+                  margin-top: 50%;
+              }
+              80%{
+                  margin-top: 51%;
+              }
+
+            }
             
             #highscore {
-            position: relative;;
+
+            position: relative;
             overflow-x: hidden;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;  
+            height: 100%;
+
             }
+
             #highscore-text {
+
                 color: white;
                 position: sticky;
                 font-size: 64px;
                 text-align: center;
                 margin-top: 5%;
+
             }
+
             #highscores {
+
                 color: white;
                 position: absolute;
                 width: 100%;
@@ -1029,9 +1213,13 @@
                 top: 0;
                 left: 0;
                 font-size: 44px;
+
             }
+
             #clear {
                 left:  50px;
             }
+
             /* Game end */
+
         }

@@ -25,13 +25,20 @@ if( event.keyCode === 37 ) {
 
     }
 
-    else if( map[ redGhost.y ][ redGhost.x+1 ] === 2 || map[ redGhost.y ][ redGhost.x+1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6 || map[ greenGhost.y ][ greenGhost.x+1 ] === 2 || map[ greenGhost.y ][ greenGhost.x+1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 6 ) {
+    if( map[ redGhost.y ][ redGhost.x+1 ] === 2 || map[ redGhost.y ][ redGhost.x+1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6 || map[ greenGhost.y ][ greenGhost.x+1 ] === 2 || map[ greenGhost.y ][ greenGhost.x+1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 6 ) {
 
       moveRightCoin ( redGhost );
       moveRightCoin ( yellowGhost );
       moveRightCoin ( greenGhost );
       moveRightCoin ( pinkGhost );
       drawWorld ();
+
+    }
+
+    if ( map[ redGhost.y ][ redGhost.x+1 ] === 5 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 5 || map[ greenGhost.y ][ greenGhost.x+1 ] === 5 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 5 ) {
+
+        newPosition ();
+        drawWorld ();
 
     }
 
@@ -50,13 +57,20 @@ else if ( event.keyCode === 38 ) {
 
     }
 
-    else if ( map[ redGhost.y-1 ][ redGhost.x ] === 2 || map[ redGhost.y-1 ][ redGhost.x ] === 6 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y-1 ][ greenGhost.x ] === 2 || map[ greenGhost.y-1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 6) {
+    if ( map[ redGhost.y-1 ][ redGhost.x ] === 2 || map[ redGhost.y-1 ][ redGhost.x ] === 6 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y-1 ][ greenGhost.x ] === 2 || map[ greenGhost.y-1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 6) {
 
        moveUpCoin ( redGhost );
        moveUpCoin ( yellowGhost );
        moveUpCoin ( greenGhost );
        moveUpCoin ( pinkGhost );
        drawWorld ();
+
+    }
+
+    if ( map[ redGhost.y-1 ][ redGhost.x ] === 5 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 5 || map[ greenGhost.y-1 ][ greenGhost.x ] === 5 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 5) {
+
+        newPosition ();
+        drawWorld ();
 
     }
 
@@ -75,12 +89,19 @@ else if ( event.keyCode === 39 ) {
 
     }
 
-    else if ( map[ redGhost.y ][ redGhost.x-1 ] === 2 || map[ redGhost.y ][ redGhost.x-1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 6 || map[ greenGhost.y ][ greenGhost.x-1 ] === 2 || map[ greenGhost.y ][ greenGhost.x-1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 6) {
+    if ( map[ redGhost.y ][ redGhost.x-1 ] === 2 || map[ redGhost.y ][ redGhost.x-1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 6 || map[ greenGhost.y ][ greenGhost.x-1 ] === 2 || map[ greenGhost.y ][ greenGhost.x-1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 6) {
 
         moveLeftCoin ( redGhost );
         moveLeftCoin ( yellowGhost );
         moveLeftCoin ( greenGhost );
         moveLeftCoin ( pinkGhost );
+        drawWorld ();
+
+    }
+
+    if ( map[ redGhost.y ][ redGhost.x-1 ] === 5 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 5 || map[ greenGhost.y ][greenGhost.x-1 ] === 5 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 5) {
+
+        newPosition ();
         drawWorld ();
 
     }
@@ -100,12 +121,19 @@ else if ( event.keyCode === 34 ) {
 
     }
 
-    else if( map[ redGhost.y+1 ][ redGhost.x ] === 2 || map[ redGhost.y+1 ][ redGhost.x ] === 6 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y+1 ][ greenGhost.x ] === 2 || map[ greenGhost.y+1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 6) {
+    if ( map[ redGhost.y+1 ][ redGhost.x ] === 2 || map[ redGhost.y+1 ][ redGhost.x ] === 6 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y+1 ][ greenGhost.x ] === 2 || map[ greenGhost.y+1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 6) {
 
         moveDownCoin ( redGhost );
         moveDownCoin ( yellowGhost );
         moveDownCoin ( greenGhost );
         moveDownCoin ( pinkGhost );
+        drawWorld ();
+
+    }
+
+    if ( map[ redGhost.y+1 ][ redGhost.x ] === 5 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 5 || map[ greenGhost.y+1 ][ greenGhost.x ] === 5 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 5) {
+
+        newPosition ();
         drawWorld ();
 
     }

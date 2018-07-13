@@ -1,10 +1,10 @@
 function heartsDraw () {
 
-    document.getElementById('hearts-lvl').innerHTML = "";
+    document.getElementById( 'hearts-lvl' ).innerHTML = "";
 
-    for(var index = 0; index < life; index++) {
+    for( var i = 0; i < life; i++ ) {
 
-        document.getElementById('hearts-lvl').innerHTML += '<i class="fa fa-heart"></i>';
+        document.getElementById( 'hearts-lvl' ).innerHTML += '<i class="fa fa-heart"></i>';
 
     }
 

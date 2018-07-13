@@ -11,7 +11,7 @@ function lose () {
         heartsDraw ();
         drawWorld ();
 
-        if( life === 0) {
+        if( life === 0 ) {
 
             die.play ();
             highscore += score;

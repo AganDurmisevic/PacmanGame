@@ -51,7 +51,7 @@
                         winner.play ();
 
                     }
-
+                    
                     document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
                     moveLeft ( pacman );
                     lose ();

@@ -515,7 +515,7 @@
         }
 
         drawWorld ();
-        
+
     }
 
 document.onkeydown = standard;
