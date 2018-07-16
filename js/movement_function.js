@@ -1,13 +1,7 @@
 //Universal ghosts movement
 function moveLeft ( movement ) {
 
-    if ( map[ movement.y ][ movement.x-1 ] !== 1 ) {
-
-        map[ movement.y ][ movement.x ] = 3;
-        movement.x -= 1;
-        map[ movement.y ][ movement.x ] = movement.id;
-
-    }
+    thisdoesnotwork;
 
 }
 
