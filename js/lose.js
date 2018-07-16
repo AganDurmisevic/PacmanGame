@@ -5,11 +5,9 @@ function lose () {
     if( !won () && pacman.y === redGhost.y && pacman.x === redGhost.x ) {
 
         ghosts.play ();
-        newPosition ();
-        drawWorld ();
         life -= 1;
         heartsDraw ();
-        drawWorld ();
+        newPosition ();
 
         if( life === 0 ) {
 
@@ -26,11 +24,10 @@ function lose () {
     else if ( !won () && pacman.y === yellowGhost.y && pacman.x === yellowGhost.x ) {
 
         ghosts.play ();
-        newPosition ();
-        drawWorld ();
         life -= 1;
         heartsDraw ();
-        drawWorld ();
+        newPosition ();
+
         if( life === 0 ) {
                 die.play ();
                 highscore += score;
@@ -45,11 +42,10 @@ function lose () {
     else if ( !won () && pacman.y === greenGhost.y && pacman.x === greenGhost.x ) {
 
         ghosts.play ();
-        newPosition ();
-        drawWorld ();
         life -= 1;
         heartsDraw ();
-        drawWorld ();
+        newPosition ();
+
         if (life === 0) {
 
                 die.play ();
@@ -65,11 +61,10 @@ function lose () {
     else if ( !won () && pacman.y === pinkGhost.y && pacman.x === pinkGhost.x ) {
 
         ghosts.play ();
-        newPosition ();
-        drawWorld ();
         life -= 1;
         heartsDraw ();
-        drawWorld ();
+        newPosition ();
+
         if( life === 0 ) {
 
                 localStorageHighscore ();
@@ -82,7 +77,7 @@ function lose () {
             }
 
     }
-
+    drawWorld ();
     return false;
 
 }

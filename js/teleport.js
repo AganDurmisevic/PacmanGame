@@ -43,12 +43,9 @@ function newPositionRight2 () {
 function newPosition () {
 
     map[ pacman.y ][ pacman.x]  = 3;
-    ghosts.play();
-    drawWorld();
     pacman.x = 2;
     pacman.y = 1;
     map[ pacman.y ][ pacman.x]  = 5;
-    drawWorld ();
 
 }
 
@@ -56,11 +53,8 @@ function newPosition () {
 function newPosition2 () {
 
     map[ pacman2.y ][ pacman2.x]  = 3;
-    ghosts.play();
-    drawWorld();
     pacman2.x = 4;
     pacman2.y = 2;
     map[ pacman2.y ][ pacman2.x]  = 12;
-    drawWorld ();
 
 }

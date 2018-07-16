@@ -21,44 +21,7 @@
 
                 // turns the Pacman 180deg because he starts to look to the right.
                 pacman.direction = 'turn-180';
-
-                if ( map[ pacman.y ][ pacman.x-1 ] !== 1 && map[ pacman.y ][ pacman.x-1 ] !== 7 ) {
-
-                    if ( map[ pacman.y ][ pacman.x-1 ] === 2) {
-
-                        score = score + 10;
-                        eat.play ();
-
-                    }
-
-                    if ( map[ pacman.y ][ pacman.x-1 ] === 6 ) {
-
-                        score = score + 10;
-                        eatPill.play ();
-
-                    }
-
-                    if ( map[ pacman.y ][ pacman.x-1 ] === 4 ) {
-
-                        score = score + 40;
-                        eat.play ();
-
-                    }
-
-                    if ( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 3 ][ 0 ]) {
-
-                        newPositionLeft ();
-                        winner.play ();
-
-                    }
-                    
-                    document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-                    moveLeft ( pacman );
-                    lose ();
-                    won ();
-
-                }
-
+                collisionLeft ();
                 drawWorld();
 
             }
@@ -67,39 +30,9 @@
             //If | is pressed then the Pacman runs to the top, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if ( e.keyCode === 38 ) {
 
-            // Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
-            pacman.direction = 'turn-270';
-
-            if ( map[ pacman.y-1 ][ pacman.x ] !== 1 && map[ pacman.y-1 ][ pacman.x ] !== 7) {
-
-                if ( map[ pacman.y-1 ][ pacman.x ] === 2 ) {
-
-                    score = score + 10;
-                    eat.play ();
-
-                }
-
-                if ( map[ pacman.y-1 ][ pacman.x ] === 6 ) {
-
-                    score = score + 10;
-                    eatPill.play();
-
-                }
-
-                if ( map[ pacman.y-1 ][ pacman.x ] === 4 ) {
-
-                    score = score + 40;
-                    eat.play ();
-
-                }
-
-                document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-                moveUp ( pacman );
-                won ();
-                lose ();
-
-                }
-
+                // Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
+                pacman.direction = 'turn-270';
+                collisionTop ();
                 drawWorld ();
 
             }
@@ -107,39 +40,10 @@
             //If -> is pressed then the Pacman runs to the right, but only if there are no obstacles in front of him, otherwise he gets points on 'fruits'.
 			else if ( e.keyCode === 39 ) {
 
-            //direction is empty because looking to the right is default (unchanged state).
-            pacman.direction = '';
-            if( map[ pacman.y ][ pacman.x+1 ] !== 1 && map[ pacman.y ][ pacman.x+1 ] !== 7 ) {
-
-                if( map[ pacman.y ][ pacman.x+1 ] === 2 ) {
-
-                    score = score + 10;
-                    eat.play ();
-
-                }
-
-                if( map[ pacman.y ][ pacman.x+1 ] === 6 ) {
-
-                    score = score + 40;
-                    eatPill.play ();
-
-                }
-
-                if( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 9 ][ 19 ] ) {
-
-                    newPositionRight ();
-                    winner.play ();
-
-                }
-
-                document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-                moveRight ( pacman );
-                won ();
-                lose ();
-
-            }
-
-            drawWorld ();
+                //direction is empty because looking to the right is default (unchanged state).
+                pacman.direction = '';
+                collisionRight ();
+                drawWorld ();
 
             }
 
@@ -147,32 +51,9 @@
             //If v is pressed then the Pacman runs down, but only if there are no obstacles in front of him, otherwise he gets points when he hits fruits.
 			else if ( e.keyCode === 40 ) {
 
-            //Turn the Pacman 90deg (down) because it starts to look right.
-            pacman.direction = 'turn-90';
-
-                if ( map[ pacman.y+1 ][ pacman.x ] !== 1 && map[ pacman.y+1 ][ pacman.x ] !== 7 ) {
-
-                    if ( map[ pacman.y+1 ][ pacman.x ] === 2 ) {
-
-                        score = score + 10;
-                        eat.play ();
-
-                    }
-
-                    if ( map[ pacman.y+1 ][ pacman.x ] === 6 ) {
-
-                        score = score + 40;
-                        eatPill.play ();
-
-                    }
-
-                document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-                moveDown ( pacman );
-                won ();
-                lose ();
-
-                }
-
+                //Turn the Pacman 90deg (down) because it starts to look right.
+                pacman.direction = 'turn-90';
+                collisionBottom ();
                 drawWorld ();
 
             }
@@ -186,13 +67,12 @@
             }
 
             //     When R ('82 ') is pressed and function lose() return true the level game will be reaped.
-            else if ( e.keyCode === 82 && lose () ) {
+            if ( e.keyCode === 82 && lose () ) {
 
                 document.onkeydown = newStart;
                 sound.play ();
 
             }
-        
 
             //When Space ('32') is pressed and function won() returns true
             //the level is increased resp. Map, Pacman etc. also loaded new if the new level

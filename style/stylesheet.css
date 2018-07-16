@@ -309,7 +309,7 @@
         .redGhost {
 			width: 50px;
 			height: 50px;
-			background-image: url('../bilder/rot.png');
+			background-image: url('../img/rot.png');
             background-size: cover;
             background-position: center;
 			display: inline-block;
@@ -318,7 +318,7 @@
         .yellowGhost {
             width: 50px;
             height: 50px;
-            background-image: url('../bilder/gelb.png');
+            background-image: url('../img/gelb.png');
             background-size: cover;
             background-position: center;
             display: inline-block;
@@ -327,7 +327,7 @@
         .greenGhost {
             width: 50px;
             height: 50px;
-            background-image: url('../bilder/blau.png');
+            background-image: url('../img/blau.png');
             background-size: cover;
             background-position: center;
             display: inline-block;
@@ -336,7 +336,7 @@
         .pinkGhost {
             width: 50px;
             height: 50px;
-            background-image: url('../bilder/pink.png');
+            background-image: url('../img/pink.png');
             background-size: cover;
             background-position: center;
             display: inline-block;
@@ -346,7 +346,7 @@
         .wall {
             height: 50px;
             width: 50px;
-            background-image: url('../bilder/neon.png');
+            background-image: url('../img/neon.png');
             background-position: center;
             background-size: cover;
             display: inline-block;
@@ -354,7 +354,7 @@
         .wallL {
 			height: 50px;
             width: 50px;
-            background-image: url('../bilder/neon.png');
+            background-image: url('../img/neon.png');
 			background-position: center;
 			background-size: cover;
 			display: inline-block;
@@ -362,7 +362,7 @@
         .coin2 {
 			width: 50px;
 			height: 50px;
-			background-image: url('../bilder/orangen.png');
+			background-image: url('../img/orangen.png');
 			background-position: center;
 			background-size: cover;
 			display: inline-block;
@@ -370,7 +370,7 @@
         .coin1 {
 			width: 50px;
 			height: 50px;
-			background-image: url('../bilder/point.png');
+			background-image: url('../img/point.png');
 			background-position: center;
 			background-size: cover;
 			display: inline-block;
@@ -379,7 +379,7 @@
         .coin {
             height: 50px;
             width: 50px;
-			background-image: url('../bilder/point.png');
+			background-image: url('../img/point.png');
 			background-position: center;
 			background-size: cover;
 			display: inline-block;
@@ -814,7 +814,7 @@
             .redGhost {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/rot.png');
+                background-image: url('../img/rot.png');
                 background-size: cover;
                 background-position: center;
                 display: inline-block;
@@ -823,7 +823,7 @@
             .yellowGhost {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/gelb.png');
+                background-image: url('../img/gelb.png');
                 background-size: cover;
                 background-position: center;
                 display: inline-block;
@@ -832,7 +832,7 @@
             .greenGhost {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/blau.png');
+                background-image: url('../img/blau.png');
                 background-size: cover;
                 background-position: center;
                 display: inline-block;
@@ -841,7 +841,7 @@
             .pinkGhost {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/pink.png');
+                background-image: url('../img/pink.png');
                 background-size: cover;
                 background-position: center;
                 display: inline-block;
@@ -851,7 +851,7 @@
             .wall {
                 max-height: 40px;
                 max-width: 40px;
-                background-image: url('../bilder/neon.png');
+                background-image: url('../img/neon.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
@@ -859,7 +859,7 @@
             .wallL {
                 max-height: 40px;
                 max-width: 40px;
-                background-image: url('../bilder/neon.png');
+                background-image: url('../img/neon.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
@@ -867,7 +867,7 @@
             .coin2 {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/orangen.png');
+                background-image: url('../img/orangen.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
@@ -875,7 +875,7 @@
             .coin1 {
                 max-width: 40px;
                 max-height: 40px;
-                background-image: url('../bilder/point.png');
+                background-image: url('../img/point.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;
@@ -884,7 +884,7 @@
             .coin {
                 max-height: 40px;
                 max-width: 40px;
-                background-image: url('../bilder/point.png');
+                background-image: url('../img/point.png');
                 background-position: center;
                 background-size: cover;
                 display: inline-block;

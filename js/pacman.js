@@ -28,6 +28,6 @@
 
     document.addEventListener( 'DOMContentLoaded', function () {
         drawWorld ();
-        //setInterval(drawWorld, 500);
+        //setInterval(drawWorld, 100);
     }, false );
 
