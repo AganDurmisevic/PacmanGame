@@ -3,7 +3,6 @@ var fieldBehindTheGhost = "";
 //Universal ghosts movement
 function moveLeft ( movement ) {
 
-<<<<<<< HEAD
     fieldBehindTheGhost = 3;
     positionBeforeMoveX = pacman.x;
     positionBeforeMoveY = pacman.y;
@@ -28,10 +27,6 @@ function moveLeft ( movement ) {
         map[ movement.y ][ movement.x ] = movement.id;
 
     }
-=======
-    thisdoesnotwork;
->>>>>>> f2c6b4a9374e06d565318437c8b7b987bfcf0da8
-
 }
 
 function moveUp ( movement ) {
