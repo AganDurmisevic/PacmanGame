@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d532df9c-d78e-4917-90f0-caffefc20c92" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/js-multiplayer/collision-multi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/blau.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/gelb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/mauer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/mauern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/neon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/newGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/newGostNew.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/orangeGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/orangen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/redGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/rot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bilder/textur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js-multiplayer/loseMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-multiplayer/loseMulti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js-multiplayer/movementMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/js-multiplayer/movementMulti.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/collision.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/collision.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ghosts_movement.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ghosts_movement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/lose.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/lose.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/movement.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/keyListener.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/movement_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/movement_function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/pacman.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pacman.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/teleport.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/teleport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/multiplay.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/multiplay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiplay.html" beforeDir="false" afterPath="$PROJECT_DIR$/multiplay.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,17 +28,30 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            <state relative-caret-position="390">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movement_function.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/movement_function.js">
+      <file leaf-file-name="movementMulti.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js-multiplayer/movementMulti.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
+            <state relative-caret-position="115">
+              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+              <folding>
+                <element signature="e#4#11#0" />
+                <element signature="e#684#711#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collision-multi.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js-multiplayer/collision-multi.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1131">
+              <caret line="293" selection-start-line="293" selection-end-line="293" />
             </state>
           </provider>
         </entry>
@@ -103,28 +102,31 @@
         <option value="$PROJECT_DIR$/js/onepage.js" />
         <option value="$PROJECT_DIR$/js/won.js" />
         <option value="$PROJECT_DIR$/loading.html" />
-        <option value="$PROJECT_DIR$/multiplay.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/js-multiplayer/drawWorld2.js" />
         <option value="$PROJECT_DIR$/js-multiplayer/heartsDrawMulti.js" />
         <option value="$PROJECT_DIR$/js-multiplayer/levelsMulti.js" />
-        <option value="$PROJECT_DIR$/js-multiplayer/loseMulti.js" />
         <option value="$PROJECT_DIR$/js-multiplayer/music.js" />
         <option value="$PROJECT_DIR$/js/music.js" />
         <option value="$PROJECT_DIR$/js-multiplayer/wonMulti.js" />
-        <option value="$PROJECT_DIR$/js-multiplayer/movementMulti.js" />
         <option value="$PROJECT_DIR$/js/heartsDraw.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/movement.js" />
-        <option value="$PROJECT_DIR$/js/lose.js" />
         <option value="$PROJECT_DIR$/style/stylesheet.css" />
         <option value="$PROJECT_DIR$/js/teleport.js" />
         <option value="$PROJECT_DIR$/style/multiplay.css" />
-        <option value="$PROJECT_DIR$/js/collision.js" />
-        <option value="$PROJECT_DIR$/js/ghosts_movement.js" />
         <option value="$PROJECT_DIR$/js/keyListener.js" />
-        <option value="$PROJECT_DIR$/js/movement_function.js" />
+        <option value="$PROJECT_DIR$/js-multiplayer/drawWorld2.js" />
+        <option value="$PROJECT_DIR$/js/caught.js" />
+        <option value="$PROJECT_DIR$/js/collision.js" />
         <option value="$PROJECT_DIR$/js/pacman.js" />
+        <option value="$PROJECT_DIR$/js/movement_function.js" />
+        <option value="$PROJECT_DIR$/js/lose.js" />
+        <option value="$PROJECT_DIR$/js-multiplayer/loseMulti.js" />
+        <option value="$PROJECT_DIR$/js-multiplayer/ghosts_movement.js" />
+        <option value="$PROJECT_DIR$/js/ghosts_movement.js" />
+        <option value="$PROJECT_DIR$/multiplay.html" />
+        <option value="$PROJECT_DIR$/js-multiplayer/movementMulti.js" />
+        <option value="$PROJECT_DIR$/js-multiplayer/collision-multi.js" />
       </list>
     </option>
   </component>
@@ -143,9 +145,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="229" />
-    <option name="y" value="52" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="167" />
+    <option name="y" value="51" />
     <option name="width" value="1079" />
     <option name="height" value="664" />
   </component>
@@ -166,6 +168,11 @@
               <item name="PacmanGame" type="b2602c69:ProjectViewProjectNode" />
               <item name="PacmanGame" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PacmanGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PacmanGame" type="462c0819:PsiDirectoryNode" />
+              <item name="js-multiplayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PacmanGame" type="b2602c69:ProjectViewProjectNode" />
@@ -231,26 +238,35 @@
       <workItem from="1531378399565" duration="1246000" />
       <workItem from="1531381768875" duration="16112000" />
       <workItem from="1531464962503" duration="23181000" />
-      <workItem from="1531723432011" duration="8222000" />
+      <workItem from="1531723432011" duration="18584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48761000" />
+    <option name="totallyTimeSpent" value="59123000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15972222" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16041666" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39976415" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -260,25 +276,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19027779" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976415" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -288,7 +285,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -363,15 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/howler.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2900">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/background.js" />
     <entry file="file://$PROJECT_DIR$/js/howler.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -396,73 +384,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/drawWorld2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
-          <folding>
-            <element signature="e#381#3669#0" />
-            <element signature="e#453#3568#0" />
-            <element signature="e#532#645#0" />
-            <element signature="e#728#843#0" />
-            <element signature="e#903#1016#0" />
-            <element signature="e#1099#1213#0" />
-            <element signature="e#1296#1410#0" />
-            <element signature="e#1495#1610#0" />
-            <element signature="e#1696#2160#0" />
-            <element signature="e#2248#2722#0" />
-            <element signature="e#2588#2704#0" />
-            <element signature="e#2810#2927#0" />
-            <element signature="e#3018#3138#0" />
-            <element signature="e#3228#3347#0" />
-            <element signature="e#3436#3554#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/heartsDrawMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#237#334#0" />
-            <element signature="e#432#530#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/localStorage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/loseMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="201" column="7" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
-          <folding>
-            <element signature="e#249#675#0" />
-            <element signature="e#413#669#0" />
-            <element signature="e#761#1133#0" />
-            <element signature="e#928#1127#0" />
-            <element signature="e#1224#1620#0" />
-            <element signature="e#1384#1614#0" />
-            <element signature="e#1713#2081#0" />
-            <element signature="e#1876#2075#0" />
-            <element signature="e#2170#2566#0" />
-            <element signature="e#2330#2560#0" />
-            <element signature="e#2657#3025#0" />
-            <element signature="e#2820#3019#0" />
-            <element signature="e#3112#3508#0" />
-            <element signature="e#3272#3502#0" />
-            <element signature="e#3597#3965#0" />
-            <element signature="e#3760#3959#0" />
-            <element signature="e#4098#4541#0" />
-            <element signature="e#4311#4536#0" />
-            <element signature="e#4762#5013#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,93 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/levelsMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#4#43#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/wonMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-multiplayer/movementMulti.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="517" column="8" lean-forward="true" selection-start-line="517" selection-start-column="8" selection-end-line="517" selection-end-column="8" />
-          <folding>
-            <element signature="e#4#11#0" />
-            <element signature="e#684#711#0" />
-            <element signature="e#822#12017#0" />
-            <element signature="e#1069#2456#0" />
-            <element signature="e#1350#2413#0" />
-            <element signature="e#1428#1531#0" />
-            <element signature="e#1608#1715#0" />
-            <element signature="e#1792#1895#0" />
-            <element signature="e#1998#2140#0" />
-            <element signature="e#2674#3750#0" />
-            <element signature="e#2924#3707#0" />
-            <element signature="e#3002#3105#0" />
-            <element signature="e#3182#3289#0" />
-            <element signature="e#3366#3469#0" />
-            <element signature="e#3958#4954#0" />
-            <element signature="e#4182#4915#0" />
-            <element signature="e#4252#4343#0" />
-            <element signature="e#4412#4507#0" />
-            <element signature="e#4603#4698#0" />
-            <element signature="e#4969#4975#0" />
-            <element signature="e#5174#6025#0" />
-            <element signature="e#5397#5982#0" />
-            <element signature="e#5475#5578#0" />
-            <element signature="e#5655#5762#0" />
-            <element signature="e#6118#7387#0" />
-            <element signature="e#6357#7344#0" />
-            <element signature="e#6437#6534#0" />
-            <element signature="e#6613#6714#0" />
-            <element signature="e#6793#6890#0" />
-            <element signature="e#6995#7101#0" />
-            <element signature="e#7611#8495#0" />
-            <element signature="e#7858#8452#0" />
-            <element signature="e#7930#7983#0" />
-            <element signature="e#8054#8107#0" />
-            <element signature="e#8178#8231#0" />
-            <element signature="e#8703#9701#0" />
-            <element signature="e#8932#9662#0" />
-            <element signature="e#9004#9089#0" />
-            <element signature="e#9160#9249#0" />
-            <element signature="e#9347#9442#0" />
-            <element signature="e#9715#9721#0" />
-            <element signature="e#9931#10784#0" />
-            <element signature="e#10161#10741#0" />
-            <element signature="e#10241#10338#0" />
-            <element signature="e#10417#10518#0" />
-            <element signature="e#11050#11299#0" />
-            <element signature="e#11470#11532#0" />
-            <element signature="e#11659#11721#0" />
-            <element signature="e#11868#11990#0" />
-            <element signature="e#12027#12040#0" />
-            <element signature="e#12175#12453#0" />
-            <element signature="e#12214#12426#0" />
-            <element signature="e#12468#12479#0" />
-            <element signature="e#12636#12854#0" />
-            <element signature="e#12704#12827#0" />
-            <element signature="e#13061#14131#0" />
-            <element signature="e#13494#13629#0" />
-            <element signature="e#14141#14214#0" />
-            <element signature="e#14318#14924#0" />
-            <element signature="e#14970#15576#0" />
-            <element signature="e#15622#16228#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/loading.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -586,37 +424,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/drawWorld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/heartsDraw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/won.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/teleport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!block;n#newPositionRight#0" />
-            <element signature="n#!!block;n#newPositionRight2#0" />
           </folding>
         </state>
       </provider>
@@ -663,22 +476,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multiplay.html">
+    <entry file="file://$PROJECT_DIR$/js/onepage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="104" column="31" lean-forward="true" selection-start-line="104" selection-start-column="31" selection-end-line="104" selection-end-column="31" />
+        <state relative-caret-position="435">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/caught.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/levels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="204" column="6" lean-forward="true" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lose.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#script#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#1#51#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pacman.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/teleport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!block;n#newPositionRight#0" />
+            <element signature="n#!!block;n#newPositionRight2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/drawWorld.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/ghosts_movement.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/wonMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/loseMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="100" column="71" lean-forward="true" selection-start-line="100" selection-start-column="71" selection-end-line="100" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/levelsMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#4#43#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/howler.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/heartsDrawMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/drawWorld2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/movement_function.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1584">
+          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/heartsDraw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ghosts_movement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#4501#4510#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/collision.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/keyListener.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#510#537#0" />
+            <element signature="e#1071#1077#0" />
+            <element signature="e#1263#1496#0" />
+            <element signature="e#1686#1903#0" />
+            <element signature="e#1917#1923#0" />
+            <element signature="e#2111#2320#0" />
+            <element signature="e#2569#2707#0" />
+            <element signature="e#2973#3035#0" />
+            <element signature="e#3246#3371#0" />
+            <element signature="e#3410#3423#0" />
+            <element signature="e#3561#3790#0" />
+            <element signature="e#3796#3807#0" />
+            <element signature="e#3963#4154#0" />
+            <element signature="e#4164#4174#0" />
+            <element signature="e#4337#6743#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/multiplay.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="342">
           <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
           <folding>
             <element signature="e#19#67#0" />
@@ -690,99 +659,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/levels.js">
+    <entry file="file://$PROJECT_DIR$/multiplay.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="204" column="6" lean-forward="true" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ghosts_movement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+        <state relative-caret-position="553">
+          <caret line="109" column="50" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="50" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#script#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/keyListener.js">
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/collision-multi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        <state relative-caret-position="1131">
+          <caret line="293" selection-start-line="293" selection-end-line="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-multiplayer/movementMulti.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
           <folding>
             <element signature="e#4#11#0" />
-            <element signature="e#510#537#0" />
-            <element signature="e#623#3414#0" />
-            <element signature="e#847#1057#0" />
-            <element signature="e#1071#1077#0" />
-            <element signature="e#1263#1496#0" />
-            <element signature="e#1686#1903#0" />
-            <element signature="e#1917#1923#0" />
-            <element signature="e#2111#2320#0" />
-            <element signature="e#2569#2707#0" />
-            <element signature="e#2869#2964#0" />
-            <element signature="e#2987#3049#0" />
-            <element signature="e#3260#3385#0" />
-            <element signature="e#3424#3437#0" />
-            <element signature="e#3575#3804#0" />
-            <element signature="e#3610#3775#0" />
-            <element signature="e#3810#3821#0" />
-            <element signature="e#3977#4168#0" />
-            <element signature="e#4351#6757#0" />
+            <element signature="e#684#711#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/lose.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-          <folding>
-            <element signature="e#1#51#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/onepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/collision.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!block;n#collisionLeft#0" />
-            <element signature="n#!!block;n#collisionTop#0" />
-            <element signature="n#!!block;n#collisionRight#0" />
-            <element signature="n#!!block;n#collisionBottom#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pacman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/movement_function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="161" column="36" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
         </state>
       </provider>
     </entry>

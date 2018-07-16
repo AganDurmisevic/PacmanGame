@@ -1,12 +1,9 @@
 //Function checks if one of the players has the game loose and. whether one has encountered the Ghost (if yes, 1 life is deducted).
 function loseMulti () {
 
-    drawWorld ();
-
-    if ( !wonMulti () && pacman.y === redGhost.y && pacman.x === redGhost.x ) {
+    if ( !wonMulti () && pacman.y === redGhost.y && pacman.x === redGhost.x || redGhost.y === positionBeforeMoveY && redGhost.x === positionBeforeMoveX ) {
 
         newPosition ();
-        drawWorld ();
         life -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -24,10 +21,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === redGhost.y && pacman2.x === redGhost.x ) {
+    else if ( !wonMulti () && pacman2.y === redGhost.y && pacman2.x === redGhost.x || redGhost.y === positionBeforeMoveY && redGhost.x === positionBeforeMoveX ) {
 
         newPosition2 ();
-        drawWorld ();
         life2 -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -44,10 +40,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman.y === yellowGhost.y && pacman.x === yellowGhost.x ) {
+    else if ( !wonMulti () && pacman.y === yellowGhost.y && pacman.x === yellowGhost.x || yellowGhost.y === positionBeforeMoveY && yellowGhost.x === positionBeforeMoveX ) {
 
         newPosition ();
-        drawWorld ();
         life -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -65,10 +60,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === yellowGhost.y && pacman2.x === yellowGhost.x ) {
+    else if ( !wonMulti () && pacman2.y === yellowGhost.y && pacman2.x === yellowGhost.x || yellowGhost.y === positionBeforeMoveY && yellowGhost.x === positionBeforeMoveX ) {
 
         newPosition2 ();
-        drawWorld ();
         life2 -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -85,10 +79,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman.y === greenGhost.y && pacman.x === greenGhost.x ) {
+    else if ( !wonMulti () && pacman.y === greenGhost.y && pacman.x === greenGhost.x || greenGhost.y === positionBeforeMoveY && greenGhost.x === positionBeforeMoveX ) {
 
         newPosition ();
-        drawWorld ();
         life -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -105,10 +98,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === greenGhost.y && pacman2.x === greenGhost.x ) {
+    else if ( !wonMulti () && pacman2.y === greenGhost.y && pacman2.x === greenGhost.x || greenGhost.y === positionBeforeMoveY && greenGhost.x === positionBeforeMoveX ) {
 
         newPosition2 ();
-        drawWorld ();
         life2 -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -125,10 +117,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman.y === pinkGhost.y && pacman.x === pinkGhost.x ) {
+    else if ( !wonMulti () && pacman.y === pinkGhost.y && pacman.x === pinkGhost.x || pinkGhost.y === positionBeforeMoveY && pinkGhost.x === positionBeforeMoveX ) {
 
         newPosition ();
-        drawWorld ();
         life -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -145,10 +136,9 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === pinkGhost.y && pacman2.x === pinkGhost.x ) {
+    else if ( !wonMulti () && pacman2.y === pinkGhost.y && pacman2.x === pinkGhost.x || pinkGhost.y === positionBeforeMoveY && pinkGhost.x === positionBeforeMoveX ) {
 
         newPosition2 ();
-        drawWorld ();
         life2 -= 1;
         die.play ();
         heartsDrawMulti ();
@@ -169,14 +159,13 @@ function loseMulti () {
 
        newPosition2 ();
        newPosition ();
-       drawWorld ();
        life2 -= 1;
        life -= 1;
        die.play ();
        heartsDrawMulti ();
        drawWorld ();
 
-       if ( life === 0) {
+       if ( life === 0 ) {
 
            highscore += score;
            highscore2 += score2;
@@ -185,6 +174,7 @@ function loseMulti () {
            return true;
 
        }
+
        else if ( life2 === 0 ) {
 
             highscore2 += score2;

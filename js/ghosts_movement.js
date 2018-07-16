@@ -12,6 +12,7 @@
 //Ghosts Movement
 function moveGhost ( event ) {
 
+//Pacman 1
 //Red,Yellow, Pink and green Ghost left.
 if( event.keyCode === 37 ) {
 
@@ -111,6 +112,107 @@ else if ( event.keyCode === 34 ) {
     }
 
 }
+
+//Pacman2
+//Red,Yellow, Pink and green Ghost left.
+    if( event.keyCode === 65 ) {
+
+        if ( map[ redGhost.y ][ redGhost.x+1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x+1 ] !== 1 || map[ greenGhost.y ][ greenGhost.x+1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x+1 ] !== 1 ) {
+
+            moveRight ( redGhost );
+            moveRight ( yellowGhost );
+            moveRight ( greenGhost );
+            moveRight ( pinkGhost );
+            drawWorld ();
+
+        }
+
+        else if( map[ redGhost.y ][ redGhost.x+1 ] === 2 || map[ redGhost.y ][ redGhost.x+1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6 || map[ greenGhost.y ][ greenGhost.x+1 ] === 2 || map[ greenGhost.y ][ greenGhost.x+1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x+1 ] === 6 ) {
+
+            moveRightCoin ( redGhost );
+            moveRightCoin ( yellowGhost );
+            moveRightCoin ( greenGhost );
+            moveRightCoin ( pinkGhost );
+            drawWorld ();
+
+        }
+
+    }
+
+//Red, yellow, pink and green Ghost up.
+    else if ( event.keyCode === 87 ) {
+
+        if ( map[ redGhost.y-1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y-1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y-1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y-1 ][ pinkGhost.x ] !== 1) {
+
+            moveUp ( redGhost );
+            moveUp ( yellowGhost );
+            moveUp ( greenGhost );
+            moveUp ( pinkGhost );
+            drawWorld ();
+
+        }
+
+        else if ( map[ redGhost.y-1 ][ redGhost.x ] === 2 || map[ redGhost.y-1 ][ redGhost.x ] === 6 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y-1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y-1 ][ greenGhost.x ] === 2 || map[ greenGhost.y-1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y-1 ][ pinkGhost.x ] === 6 ) {
+
+            moveUpCoin ( redGhost );
+            moveUpCoin ( yellowGhost );
+            moveUpCoin ( greenGhost );
+            moveUpCoin ( pinkGhost );
+            drawWorld ();
+
+        }
+
+    }
+
+//Red,Yellow, Pink and green Ghost right.
+    else if ( event.keyCode === 68 ) {
+
+        if ( map[ redGhost.y ][ redGhost.x-1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x-1 ] !== 1 || map[ greenGhost.y ][greenGhost.x-1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x-1 ] !== 1 ) {
+
+            moveLeft ( redGhost );
+            moveLeft ( yellowGhost );
+            moveLeft ( greenGhost );
+            moveLeft ( pinkGhost );
+            drawWorld ();
+
+        }
+
+        else if ( map[ redGhost.y ][ redGhost.x-1 ] === 2 || map[ redGhost.y ][ redGhost.x-1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 2 || map[ yellowGhost.y ][ yellowGhost.x-1 ] === 6 || map[ greenGhost.y ][ greenGhost.x-1 ] === 2 || map[ greenGhost.y ][ greenGhost.x-1 ] === 6 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 2 || map[ pinkGhost.y ][ pinkGhost.x-1 ] === 6 ) {
+
+            moveLeftCoin ( redGhost );
+            moveLeftCoin ( yellowGhost );
+            moveLeftCoin ( greenGhost );
+            moveLeftCoin ( pinkGhost );
+            drawWorld ();
+
+        }
+
+    }
+
+//Red,Yellow, Pink and green Ghost down.
+    else if ( event.keyCode === 83 ) {
+
+        if ( map[ redGhost.y+1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y+1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y+1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y+1 ][ pinkGhost.x ] !== 1 ) {
+
+            moveDown ( redGhost );
+            moveDown ( yellowGhost );
+            moveDown ( greenGhost );
+            moveDown ( pinkGhost );
+            drawWorld ();
+
+        }
+
+        else if ( map[ redGhost.y+1 ][ redGhost.x ] === 2 || map[ redGhost.y+1 ][ redGhost.x ] === 6 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 2 || map[ yellowGhost.y+1 ][ yellowGhost.x ] === 6 || map[ greenGhost.y+1 ][ greenGhost.x ] === 2 || map[ greenGhost.y+1 ][ greenGhost.x ] === 6 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 2 || map[ pinkGhost.y+1 ][ pinkGhost.x ] === 6 ) {
+
+            moveDownCoin ( redGhost );
+            moveDownCoin ( yellowGhost );
+            moveDownCoin ( greenGhost );
+            moveDownCoin ( pinkGhost );
+            drawWorld ();
+
+        }
+
+    }
 
     drawWorld ();
 

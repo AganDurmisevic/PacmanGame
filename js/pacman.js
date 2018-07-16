@@ -23,8 +23,7 @@
     var yellowGhost = level[currentLevel].yellowGhost;
     var greenGhost = level[currentLevel].greenGhost;
     var pinkGhost = level[currentLevel].pinkGhost;
-    var fieldBehindTheGhost = 3;
-
+    var positionBeforeMove = "";
 
     document.addEventListener( 'DOMContentLoaded', function () {
         drawWorld ();

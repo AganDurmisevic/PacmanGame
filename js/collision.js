@@ -36,7 +36,7 @@ function collisionLeft () {
     won ();
 
     }
-
+    drawWorld ();
 }
 
 function collisionTop () {
@@ -104,6 +104,7 @@ function collisionRight () {
     lose ();
 
     }
+
 
 }
 
