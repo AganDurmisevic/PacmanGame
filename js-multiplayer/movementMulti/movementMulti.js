@@ -77,8 +77,8 @@
 
                 //Turns the Pacman 180deg because he starts to look to the right.
                 pacman2.direction = 'turn-180';
-                positionBeforeMoveX = pacman2.x;
-                positionBeforeMoveY = pacman2.y;
+                positionBeforeMoveXTwo = pacman2.x;
+                positionBeforeMoveYTwo = pacman2.y;
                 collisionLeftMultiTwo ();
                 drawWorld ();
 
@@ -90,8 +90,8 @@
 
                 //Turning Pacman 270deg because he starts to look to the right and 90deg turns him down.
                 pacman2.direction = 'turn-270';
-                positionBeforeMoveX = pacman2.x;
-                positionBeforeMoveY = pacman2.y;
+                positionBeforeMoveXTwo = pacman2.x;
+                positionBeforeMoveYTwo = pacman2.y;
                 collisionUpMultiTwo ();
                 drawWorld ();
 
@@ -102,8 +102,8 @@
 
                 //Direction is empty because looking to the right is default (unchanged state).
                 pacman2.direction = '';
-                positionBeforeMoveX = pacman2.x;
-                positionBeforeMoveY = pacman2.y;
+                positionBeforeMoveXTwo = pacman2.x;
+                positionBeforeMoveYTwo = pacman2.y;
                 collisionRightMultiTwo ();
                 drawWorld ();
 
@@ -111,13 +111,12 @@
 
             //   |
             //If v is pressed then the Pacman2 will run down, but only if there are no obstacles in front of him, otherwise he will score points if he hits 'fruits'.
-
 			else if ( e.keyCode === 83 ) {
 
                 //Turns the Pacman2 90deg (down) because he starts to look right.
                 pacman2.direction = 'turn-90';
-                positionBeforeMoveX = pacman2.x;
-                positionBeforeMoveY = pacman2.y;
+                positionBeforeMoveXTwo = pacman2.x;
+                positionBeforeMoveYTwo = pacman2.y;
                 collisionBottomMultiTwo ();
                 drawWorld ();
 

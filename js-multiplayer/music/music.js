@@ -1,38 +1,42 @@
 // howler.js -> makes it easier to play the music.
 var sound = new Howl ({
 
-    src: [ 'audio/ready.mp3' ],
+    src: ['audio/ready.mp3'],
     preload: true,
     volume: 0.5,
     autoplay: false,
-    onplay: function () {
+
+    onplay: function() {
 
         console.log( 'Play' );
 
     }
 
-}); 
+});
 
 var eat = new Howl ({
 
-    src: [ 'audio/eating.mp3' ],
+    src: ['audio/eating.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
 
-        console.log( 'Eating' );
+    onplay: function() {
+
+        console.log('Eating');
 
     }
 
 }); 
 
 var eatPill = new Howl ({
-    src: [ 'audio/eat-pill.mp3' ],
+
+    src: ['audio/eat-pill.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
+
+    onplay: function() {
 
         console.log( 'EatingPill' );
 
@@ -42,41 +46,44 @@ var eatPill = new Howl ({
 
 var die = new Howl ({
 
-    src: [ 'audio/die.mp3' ],
+    src: ['audio/die.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
+
+    onplay: function() {
 
         console.log( 'Die' );
 
     }
 
-}); 
+});
 
 var winner = new Howl ({
 
-    src: [ 'audio/waza.mp3' ],
+    src: ['audio/siren.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
 
-        console.log( 'Good' );
+    onplay: function() {
+
+        console.log( 'Winner' );
 
     }
 
-});
+}); 
 
 var ghosts = new Howl ({
 
-    src: [ 'audio/eat-ghost.mp3' ],
+    src: ['audio/eat-ghost.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
 
-        console.log( 'Ghosts' );
+    onplay: function() {
+
+        console.log('Ghosts');
 
     }
 
@@ -84,16 +91,17 @@ var ghosts = new Howl ({
 
 var paused = new Howl ({
 
-    src: [ 'audio/extra-life.mp3' ],
+    src: ['audio/extra-life.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-    onplay: function () {
 
-        console.log( 'paused' );
+    onplay: function() {
+
+        console.log( 'Paused' );
 
     }
 
 }); 
 
-sound.play ();
+sound.play();

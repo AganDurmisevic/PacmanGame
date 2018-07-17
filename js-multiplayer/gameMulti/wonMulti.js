@@ -1,3 +1,17 @@
+// Map:
+// 1 = <div class='wall'></div>            Wall
+// 2 = <div class='coin'></div>            Food
+// 3 = <div class='ground'></div>          Ground
+// 4 = <div class='coin1'></div>           Food
+// 5 = <div class='pacman'></div>          Pacman(Yellow)
+// 6 = <div class='coin2'></div>           Food
+// 7 = <div class='wallL'></div>           Wall
+// 8 = <div class='redGhost'></div>        Red Ghost
+// 9 = <div class='yellowGhost'></div>     Yellow Ghost
+// 10 = <div class='greenGhost'></div>     Green Ghost
+// 11 = <div class='pinkGhost'></div>      Pink Ghost
+// 12 = <div class='pacman2'></div>        Pacman2(Green)
+
 function wonMulti () {
 
     var count = 0;
@@ -17,12 +31,11 @@ function wonMulti () {
 
     }
 
-    drawWorld ();
     highscore += score;
     highscore2 += score2;
-    
+    drawWorld ();
 
-    if ( highscore > highscore2 ) {
+    if ( highscore > highscore2 && wonMulti () ) {
 
         document.getElementById( 'nextLvl' ).innerHTML = "PLAYER 1 VICTORY, PRESS SPACE FOR NEXT LVL!";
         winner.play ();
@@ -31,7 +44,7 @@ function wonMulti () {
 
     }
 
-    else if ( highscore === highscore2 ) {
+    else if ( highscore === highscore2 && wonMulti () ) {
 
         document.getElementById( 'nextLvl' ).innerHTML = "PLAYER 1 VICTORY, PRESS SPACE FOR NEXT LVL!";
         document.getElementById( 'nextLvl2' ).innerHTML = "PLAYER 2 VICTORY, PRESS SPACE FOR NEXT LVL!";
@@ -41,7 +54,7 @@ function wonMulti () {
 
     }
 
-    else if ( highscore < highscore2 ){
+    else if ( highscore < highscore2 && wonMulti () ) {
 
         document.getElementById( 'nextLvl2' ).innerHTML = "PLAYER 2 VICTORY, PRESS SPACE FOR NEXT LVL!";
         winner.play ();

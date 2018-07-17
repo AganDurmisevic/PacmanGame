@@ -1,3 +1,17 @@
+// Map:
+// 1 = <div class='wall'></div>            Wall
+// 2 = <div class='coin'></div>            Food
+// 3 = <div class='ground'></div>          Ground
+// 4 = <div class='coin1'></div>           Food
+// 5 = <div class='pacman'></div>          Pacman(Yellow)
+// 6 = <div class='coin2'></div>           Food
+// 7 = <div class='wallL'></div>           Wall
+// 8 = <div class='redGhost'></div>        Red Ghost
+// 9 = <div class='yellowGhost'></div>     Yellow Ghost
+// 10 = <div class='greenGhost'></div>     Green Ghost
+// 11 = <div class='pinkGhost'></div>      Pink Ghost
+// 12 = <div class='pacman2'></div>        Pacman2(Green)
+
 var map = level[ currentLevel ].map;
 var world = document.getElementById( 'world' );
 
@@ -69,7 +83,7 @@ function drawWorld () {
                     world.innerHTML += "<div class='yellowGhost'></div>";
 
 				}
-			//Grren Ghost
+			//Green Ghost
 			else if ( map[y][x] === 10 ) {
 
                     world.innerHTML += "<div class='greenGhost'></div>";

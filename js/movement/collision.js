@@ -5,138 +5,138 @@ function collisionLeft () {
         if ( map[ pacman.y ][ pacman.x - 1 ] === 2 ) {
 
             score = score + 10;
-            eat.play ();
+            eat.play();
 
         }
 
         else if ( map[ pacman.y ][ pacman.x - 1 ] === 6 ) {
 
             score = score + 10;
-            eatPill.play ();
+            eatPill.play();
 
         }
 
         else if ( map[ pacman.y ][ pacman.x - 1 ] === 4 ) {
 
             score = score + 40;
-            eat.play ();
+            eat.play();
 
         }
 
         else if ( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 3 ][ 0 ] ) {
 
-            newPositionLeft ();
-            winner.play ();
+            newPositionLeft ( pacman );
+            winner.play();
 
         }
 
     document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-    moveLeft ( pacman );
-    lose ();
-    won ();
+    moveLeft( pacman );
+    lose();
+    won();
 
     }
-    drawWorld ();
+    drawWorld();
 }
 
-function collisionTop () {
+function collisionTop() {
 
     if ( map[ pacman.y-1 ][ pacman.x ] !== 1 && map[ pacman.y-1 ][ pacman.x ] !== 7 ) {
 
         if ( map[ pacman.y - 1 ][ pacman.x ] === 2 ) {
 
             score = score + 10;
-            eat.play ();
+            eat.play();
 
         }
 
         else if ( map[ pacman.y - 1 ][ pacman.x ] === 6 ) {
 
             score = score + 10;
-            eatPill.play ();
+            eatPill.play();
 
         }
 
         else if ( map[ pacman.y - 1 ][ pacman.x ] === 4 ) {
 
             score = score + 40;
-            eat.play ();
+            eat.play();
 
         }
 
     document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-    moveUp ( pacman );
-    won ();
-    lose ();
+    moveUp( pacman );
+    won();
+    lose();
 
     }
 
 }
 
-function collisionRight () {
+function collisionRight() {
 
     if ( map[ pacman.y ][ pacman.x + 1 ] !== 1 && map[ pacman.y ][ pacman.x + 1 ] !== 7 ) {
 
         if ( map[ pacman.y ][ pacman.x + 1 ] === 2 ) {
 
             score = score + 10;
-            eat.play ();
+            eat.play();
 
         }
 
         if ( map[ pacman.y ][ pacman.x + 1 ] === 6 ) {
 
             score = score + 40;
-            eatPill.play ();
+            eatPill.play();
 
         }
 
         if ( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 9 ][ 19 ] ) {
 
-            newPositionRight ();
-            winner.play ();
+            newPositionRight (pacman);
+            winner.play();
 
         }
 
     document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
     moveRight ( pacman );
-    won ();
-    lose ();
+    won();
+    lose();
 
     }
 
 
 }
 
-function collisionBottom () {
+function collisionBottom() {
 
     if ( map[ pacman.y+1 ][ pacman.x ] !== 1 && map[ pacman.y+1 ][ pacman.x ] !== 7 ) {
 
         if ( map[ pacman.y + 1 ][ pacman.x ] === 2 ) {
 
             score = score + 10;
-            eat.play ();
+            eat.play();
 
         }
 
         else if ( map[ pacman.y + 1 ][ pacman.x ] === 6 ) {
 
             score = score + 40;
-            eatPill.play ();
+            eatPill.play();
 
         }
 
         else if ( map[ pacman.y+1 ][ pacman.x ] === 4 ) {
 
             score = score + 40;
-            eat.play ();
+            eat.play();
 
         }
 
     document.getElementById( 'score' ).innerHTML = ( "SCORE: " + score );
-    moveDown ( pacman );
-    won ();
-    lose ();
+    moveDown( pacman );
+    won();
+    lose();
 
     }
 

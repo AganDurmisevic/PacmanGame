@@ -1,12 +1,11 @@
 // howler.js -> makes it easier to play the music.
 var sound = new Howl ({
 
-    src: [ 'audio/ready.mp3' ],
+    src: ['audio/ready.mp3'],
     preload: true,
     volume: 0.5,
     autoplay: false,
-
-    onplay: function () {
+    onplay: function() {
 
         console.log( 'Play' );
 
@@ -16,27 +15,24 @@ var sound = new Howl ({
 
 var eat = new Howl ({
 
-    src: [ 'audio/eating.mp3' ],
+    src: ['audio/eating.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
+    onplay: function() {
 
-    onplay: function () {
-
-        console.log('Eating');
+        console.log( 'Eating' );
 
     }
 
 }); 
 
 var eatPill = new Howl ({
-
-    src: [ 'audio/eat-pill.mp3' ],
+    src: ['audio/eat-pill.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-
-    onplay: function () {
+    onplay: function() {
 
         console.log( 'EatingPill' );
 
@@ -46,44 +42,41 @@ var eatPill = new Howl ({
 
 var die = new Howl ({
 
-    src: [ 'audio/die.mp3' ],
+    src: ['audio/die.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
-
-    onplay: function () {
+    onplay: function() {
 
         console.log( 'Die' );
 
     }
 
-});
+}); 
 
 var winner = new Howl ({
 
-    src: [ 'audio/siren.mp3' ],
+    src: ['audio/waza.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
+    onplay: function() {
 
-    onplay: function () {
-
-        console.log( 'Winner' );
+        console.log( 'Good' );
 
     }
 
-}); 
+});
 
 var ghosts = new Howl ({
 
-    src: [ 'audio/eat-ghost.mp3' ],
+    src: ['audio/eat-ghost.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
+    onplay: function() {
 
-    onplay: function () {
-
-        console.log('Ghosts');
+        console.log( 'Ghosts' );
 
     }
 
@@ -91,14 +84,13 @@ var ghosts = new Howl ({
 
 var paused = new Howl ({
 
-    src: [ 'audio/extra-life.mp3' ],
+    src: ['audio/extra-life.mp3'],
     preload: true,
     volume: 0.9,
     autoplay: false,
+    onplay: function() {
 
-    onplay: function () {
-
-        console.log( 'Paused' );
+        console.log( 'paused' );
 
     }
 

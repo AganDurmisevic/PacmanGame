@@ -1,5 +1,5 @@
-    //The function paints the hearts.
-    //If a player loses a life, a heart is also deducted until life === 0.
+//The function draw hearts.
+//If a player loses a life, a heart is also deducted until life === 0.
 function heartsDrawMulti () {
 
     document.getElementById( 'hearts-lvl' ).innerHTML = "";

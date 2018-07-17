@@ -1,3 +1,4 @@
+//Function draw hearts
 function heartsDraw () {
 
     document.getElementById( 'hearts-lvl' ).innerHTML = "";

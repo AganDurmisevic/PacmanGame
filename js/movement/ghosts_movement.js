@@ -1,4 +1,4 @@
-// Map
+// Map:
 // 1 = <div class='wall'></div>            Wall
 // 2 = <div class='coin'></div>            Food
 // 3 = <div class='ground'></div>          Ground
@@ -8,6 +8,9 @@
 // 7 = <div class='wallL'></div>           Wall
 // 8 = <div class='redGhost'></div>        Red Ghost
 // 9 = <div class='yellowGhost'></div>     Yellow Ghost
+// 10 = <div class='greenGhost'></div>     Green Ghost
+// 11 = <div class='pinkGhost'></div>      Pink Ghost
+// 12 = <div class='pacman2'></div>        Pacman2(Green)
 
 //Ghosts Movement
 function moveGhost ( event ) {

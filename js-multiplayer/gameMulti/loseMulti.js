@@ -1,4 +1,5 @@
 //Function checks if one of the players has the game loose and. whether one has encountered the Ghost (if yes, 1 life is deducted).
+
 function loseMulti () {
 
     if ( !wonMulti () && pacman.y === redGhost.y && pacman.x === redGhost.x || redGhost.y === positionBeforeMoveY && redGhost.x === positionBeforeMoveX ) {
@@ -21,7 +22,7 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === redGhost.y && pacman2.x === redGhost.x || redGhost.y === positionBeforeMoveY && redGhost.x === positionBeforeMoveX ) {
+    else if ( !wonMulti () && pacman2.y === redGhost.y && pacman2.x === redGhost.x || redGhost.y === positionBeforeMoveYTwo && redGhost.x === positionBeforeMoveXTwo ) {
 
         newPosition2 ();
         life2 -= 1;
@@ -60,7 +61,7 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === yellowGhost.y && pacman2.x === yellowGhost.x || yellowGhost.y === positionBeforeMoveY && yellowGhost.x === positionBeforeMoveX ) {
+    else if ( !wonMulti () && pacman2.y === yellowGhost.y && pacman2.x === yellowGhost.x || yellowGhost.y === positionBeforeMoveYTwo && yellowGhost.x === positionBeforeMoveXTwo ) {
 
         newPosition2 ();
         life2 -= 1;
@@ -98,7 +99,7 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === greenGhost.y && pacman2.x === greenGhost.x || greenGhost.y === positionBeforeMoveY && greenGhost.x === positionBeforeMoveX ) {
+    else if ( !wonMulti () && pacman2.y === greenGhost.y && pacman2.x === greenGhost.x || greenGhost.y === positionBeforeMoveYTwo && greenGhost.x === positionBeforeMoveXTwo ) {
 
         newPosition2 ();
         life2 -= 1;
@@ -136,7 +137,7 @@ function loseMulti () {
 
     }
 
-    else if ( !wonMulti () && pacman2.y === pinkGhost.y && pacman2.x === pinkGhost.x || pinkGhost.y === positionBeforeMoveY && pinkGhost.x === positionBeforeMoveX ) {
+    else if ( !wonMulti () && pacman2.y === pinkGhost.y && pacman2.x === pinkGhost.x || pinkGhost.y === positionBeforeMoveYTwo && pinkGhost.x === positionBeforeMoveXTwo ) {
 
         newPosition2 ();
         life2 -= 1;

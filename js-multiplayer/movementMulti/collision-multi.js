@@ -1,3 +1,4 @@
+//Function checks where you are and what you enter.
 function collisionLeftMulti () {
 
 
@@ -26,7 +27,7 @@ function collisionLeftMulti () {
 
         if ( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 3 ][ 0 ] ) {
 
-            newPositionLeft ();
+            newPositionLeft (pacman);
             drawWorld ();
             winner.play ();
 
@@ -102,7 +103,7 @@ function collisionRightMulti () {
 
         if ( currentLevel > 0 && map[ pacman.y ][ pacman.x ] === map[ 9 ][ 19 ] ) {
 
-            newPositionRight ();
+            newPositionRight (pacman);
             winner.play ();
 
         }
@@ -176,7 +177,7 @@ function collisionLeftMultiTwo () {
 
         if ( currentLevel > 0 && map[ pacman2.y ][ pacman2.x ] === map[ 3 ][ 0 ] ) {
 
-            newPositionLeft2 ();
+            newPositionLeft ( pacman2 );
             winner.play ();
 
         }
@@ -215,7 +216,7 @@ function collisionUpMultiTwo () {
 
         }
 
-        document.getElementById('score2').innerHTML = ("SCORE: " + score2);
+        document.getElementById( 'score2' ).innerHTML = ( "SCORE: " + score2 );
         moveUp ( pacman2 );
         drawWorld ();
         wonMulti ();
@@ -247,7 +248,7 @@ function collisionRightMultiTwo () {
 
         if( currentLevel > 0 && map[ pacman2.y ][ pacman2.x ] === map[ 9 ][ 19 ] ) {
 
-            newPositionRight2 ();
+            newPositionRight ( pacman2 );
             winner.play ();
 
         }

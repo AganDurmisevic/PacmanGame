@@ -1,4 +1,4 @@
-    // Hilfe bei der Zuweisung der Objekte:
+    // Map:
 	// 1 = <div class='wall'></div>            Wall
 	// 2 = <div class='coin'></div>            Food
 	// 3 = <div class='ground'></div>          Ground
