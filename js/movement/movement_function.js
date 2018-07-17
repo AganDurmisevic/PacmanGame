@@ -3,24 +3,30 @@ var fieldBehindTheGhost = "";
 //Universal ghosts movement
 function moveLeft ( movement ) {
 
-    fieldBehindTheGhost = 3;
+    fieldBehindTheGhost = GROUND;
     positionBeforeMoveX = pacman.x;
     positionBeforeMoveY = pacman.y;
 
-    if ( map[ movement.y ][ movement.x-1 ] !== 1 ) {
+    if ( map[ movement.y ][ movement.x-1 ] !== WALL ) {
 
         map[ movement.y ][ movement.x ] = fieldBehindTheGhost;
         movement.x -= 1;
 
-        if ( map[ movement.y ][ movement.x ] === 2 ) {
+        if ( map[ movement.y ][ movement.x ] === COIN ) {
 
-            fieldBehindTheGhost = 2;
+            fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movement.y ][ movement.x ] === 6 ) {
+        else if ( map[ movement.y ][ movement.x ] === COIN_2 ) {
 
-            fieldBehindTheGhost = 6;
+            fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movement.y ][ movement.x ] === COIN_1 ) {
+
+            fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -31,23 +37,29 @@ function moveLeft ( movement ) {
 
 function moveUp ( movement ) {
 
-    fieldBehindTheGhost = 3;
+    fieldBehindTheGhost = GROUND;
     positionBeforeMove = map[ pacman.y ][ pacman.x ];
 
-    if ( map[ movement.y-1 ][ movement.x ] !== 1 ) {
+    if ( map[ movement.y-1 ][ movement.x ] !== WALL ) {
 
         map[ movement.y ][ movement.x ] = fieldBehindTheGhost;
         movement.y -= 1;
 
-        if ( map[ movement.y ][ movement.x ] === 2 ) {
+        if ( map[ movement.y ][ movement.x ] === COIN ) {
 
-            fieldBehindTheGhost = 2;
+            fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movement.y ][ movement.x ] === 6 ) {
+        else if ( map[ movement.y ][ movement.x ] === COIN_2 ) {
 
-            fieldBehindTheGhost = 6;
+            fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movement.y ][ movement.x ] === COIN_1 ) {
+
+            fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -59,23 +71,29 @@ function moveUp ( movement ) {
 
 function moveRight ( movement ) {
 
-    fieldBehindTheGhost = 3;
+    fieldBehindTheGhost = GROUND;
     positionBeforeMove = map[ pacman.y ][ pacman.x ];
 
-    if ( map[ movement.y ][ movement.x+1 ] !== 1 ) {
+    if ( map[ movement.y ][ movement.x+1 ] !== WALL ) {
 
         map[ movement.y ][ movement.x ] = fieldBehindTheGhost;
         movement.x += 1;
 
-        if ( map[ movement.y ][ movement.x ] === 2 ) {
+        if ( map[ movement.y ][ movement.x ] === COIN ) {
 
-            fieldBehindTheGhost = 2;
+            fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movement.y ][ movement.x ] === 6 ) {
+        else if ( map[ movement.y ][ movement.x ] === COIN_2 ) {
 
-            fieldBehindTheGhost = 6;
+            fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movement.y ][ movement.x ] === COIN_1 ) {
+
+            fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -87,23 +105,29 @@ function moveRight ( movement ) {
 
 function moveDown ( movement ) {
 
-    fieldBehindTheGhost = 3;
+    fieldBehindTheGhost = GROUND;
     positionBeforeMove = map[ pacman.y ][ pacman.x ];
 
-    if ( map[ movement.y+1 ][ movement.x ] !== 1 ) {
+    if ( map[ movement.y+1 ][ movement.x ] !== WALL ) {
 
         map[ movement.y ][ movement.x ] = fieldBehindTheGhost;
         movement.y += 1;
 
-        if ( map[ movement.y ][ movement.x ] === 2 ) {
+        if ( map[ movement.y ][ movement.x ] === COIN ) {
 
-            fieldBehindTheGhost = 2;
+            fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movement.y ][ movement.x ] === 6 ) {
+        else if ( map[ movement.y ][ movement.x ] === COIN_2 ) {
 
-            fieldBehindTheGhost = 6;
+            fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movement.y ][ movement.x ] === COIN_1 ) {
+
+            fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -116,23 +140,32 @@ function moveDown ( movement ) {
 //Ghost movements that are careful not to eat the fruit.
 function moveLeftCoin ( movementCoin )  {
 
-    if ( map[ movementCoin.y ][ movementCoin.x-1 ] !== 1 ) {
+    if ( map[ movementCoin.y ][ movementCoin.x-1 ] !== WALL ) {
 
-        if( map[ movementCoin.y ][ movementCoin.x-1 ] === 2 ) {
+        if( map[ movementCoin.y ][ movementCoin.x-1 ] === COIN ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.x -= 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 2;
+            movementCoin.fieldBehindTheGhost = COIN;
 
         }
 
-        else if( map[ movementCoin.y ][ movementCoin.x-1 ] === 6) {
+        else if( map[ movementCoin.y ][ movementCoin.x-1 ] === COIN_2) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.x -= 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 6;
+            movementCoin.fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if( map[ movementCoin.y ][ movementCoin.x-1 ] === COIN_1) {
+
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
+            movementCoin.x -= 1;
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
+            movementCoin.fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -142,23 +175,32 @@ function moveLeftCoin ( movementCoin )  {
 
 function moveUpCoin ( movementCoin ) {
 
-    if ( map[ movementCoin.y+1 ][ movementCoin.x ] !== 1 ) {
+    if ( map[ movementCoin.y+1 ][ movementCoin.x ] !== WALL ) {
 
-        if ( map[ movementCoin.y+1 ][ movementCoin.x ] === 2 ) {
+        if ( map[ movementCoin.y+1 ][ movementCoin.x ] === COIN ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.y += 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 2;
+            movementCoin.fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movementCoin.y+1 ][ movementCoin.x ] === 6 ) {
+        else if ( map[ movementCoin.y+1 ][ movementCoin.x ] === COIN_2 ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movement.y += 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 6;
+            movementCoin.fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movementCoin.y+1 ][ movementCoin.x ] === COIN_1 ) {
+
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
+            movement.y += 1;
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
+            movementCoin.fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -168,23 +210,32 @@ function moveUpCoin ( movementCoin ) {
 
 function moveRightCoin( movementCoin ) {
 
-    if ( map[ movementCoin.y ][ movementCoin.x+1 ] !== 1 ) {
+    if ( map[ movementCoin.y ][ movementCoin.x+1 ] !== WALL ) {
 
-        if ( map[ movementCoin.y ][ movementCoin.x+1 ] === 2 ) {
+        if ( map[ movementCoin.y ][ movementCoin.x+1 ] === COIN ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.x += 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 2;
+            movementCoin.fieldBehindTheGhost = COIN;
 
         }
 
-        else if( map[ redGhost.y ][ redGhost.x+1 ] === 6 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === 6 ) {
+        else if( map[ redGhost.y ][ redGhost.x+1 ] === COIN_2 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === COIN_2 ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.x += 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 6;
+            movementCoin.fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if( map[ redGhost.y ][ redGhost.x+1 ] === COIN_1 || map[ yellowGhost.y ][ yellowGhost.x+1 ] === COIN_1 ) {
+
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
+            movementCoin.x += 1;
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
+            movementCoin.fieldBehindTheGhost = COIN_1;
 
         }
 
@@ -194,23 +245,32 @@ function moveRightCoin( movementCoin ) {
 
 function moveDownCoin( movementCoin ) {
 
-    if ( map[ movementCoin.y-1 ][ movementCoin.x ] !== 1 ) {
+    if ( map[ movementCoin.y-1 ][ movementCoin.x ] !== WALL ) {
 
-        if ( map[ movementCoin.y-1 ][ movementCoin.x ] === 2 ) {
+        if ( map[ movementCoin.y-1 ][ movementCoin.x ] === COIN ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.y -= 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 2;
+            movementCoin.fieldBehindTheGhost = COIN;
 
         }
 
-        else if ( map[ movementCoin.y-1 ][ movementCoin.x ] === 6 ) {
+        else if ( map[ movementCoin.y-1 ][ movementCoin.x ] === COIN_2 ) {
 
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
             movementCoin.y -= 1;
             map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
-            movementCoin.fieldBehindTheGhost = 6;
+            movementCoin.fieldBehindTheGhost = COIN_2;
+
+        }
+
+        else if ( map[ movementCoin.y-1 ][ movementCoin.x ] === COIN_1 ) {
+
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.fieldBehindTheGhost;
+            movementCoin.y -= 1;
+            map[ movementCoin.y ][ movementCoin.x ] = movementCoin.id;
+            movementCoin.fieldBehindTheGhost = COIN_1;
 
         }
 

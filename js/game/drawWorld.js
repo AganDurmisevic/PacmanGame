@@ -1,17 +1,3 @@
-// Map:
-// 1 = <div class='wall'></div>            Wall
-// 2 = <div class='coin'></div>            Food
-// 3 = <div class='ground'></div>          Ground
-// 4 = <div class='coin1'></div>           Food
-// 5 = <div class='pacman'></div>          Pacman(Yellow)
-// 6 = <div class='coin2'></div>           Food
-// 7 = <div class='wallL'></div>           Wall
-// 8 = <div class='redGhost'></div>        Red Ghost
-// 9 = <div class='yellowGhost'></div>     Yellow Ghost
-// 10 = <div class='greenGhost'></div>     Green Ghost
-// 11 = <div class='pinkGhost'></div>      Pink Ghost
-// 12 = <div class='pacman2'></div>        Pacman2(Green)
-
 var map = level[ currentLevel ].map;
 var world = document.getElementById( 'world' );
 
@@ -20,51 +6,45 @@ function drawWorld () {
 	document.getElementById( 'level-show-text' ).innerHTML = ( "LEVEL: " );
 	document.getElementById( 'level-show-number' ).innerHTML =( currentLevel + 1 );
 	heartsDraw ();
-	document.getElementById( 'world' ).innerHTML = "";
+	world.innerHTML = "";
 
 	for( var y = 0; y < map.length; y = y + 1 ) {
 
 		for( var x = 0; x < map[y].length; x = x + 1 ) {
 			//Wall
-			if ( map[y][x] === 1 ) {
+			if ( map[y][x] === WALL ) {
 
 					world.innerHTML += "<div class='wall'></div>";
 
 				}
-			//Wall
-			else if ( map[y][x] === 7 ) {
-
-                    world.innerHTML += "<div class='wallL'></div>";
-
-				}
 			// Food
-			else if ( map[y][x] === 2 ) {
+			else if ( map[y][x] === COIN ) {
 
                     world.innerHTML += "<div class='coin'></div>";
 
 				}
 			//Food
-			else if ( map[y][x] === 6 ) {
+			else if ( map[y][x] === COIN_2 ) {
 
                     world.innerHTML += "<div class='coin2'></div>";
 
 				}
 			//Food
-			else if ( map[y][x] === 4 ) {
+			else if ( map[y][x] === COIN_1 ) {
 
                     world.innerHTML += "<div class='coin1'></div>";
 
 				}
 			//Ground
-			else if ( map[y][x] === 3 ) {
+			else if ( map[y][x] === GROUND ) {
 
                     world.innerHTML += "<div class='ground'></div>";
 
 				}
 			//PACMAN
-			else if ( map[y][x] === 5 ) {
+			else if ( map[y][x] === PACMAN ) {
 
-                    world.innerHTML += "<div class='pacman-bg'><div class='pacman' id='pacman'><div class='pacman-top'><div class='pacman-eyes'><div class='pacman-eye'></div></div></div><div class='pacman-bottom'></div></div></div>";
+				world.innerHTML += "<div class='pacman-bg'><div class='pacman' id='pacman'><div class='pacman-top'><div class='pacman-eyes'><div class='pacman-eye'></div></div></div><div class='pacman-bottom'></div></div></div>";
 
                     if(pacman.direction !== "") {
 						document.getElementById('pacman').classList.add(pacman.direction);
@@ -72,25 +52,25 @@ function drawWorld () {
 
 				}
 			//Red Ghost
-			else if ( map[y][x] === 8 ) {
+			else if ( map[y][x] === RED_GHOST ) {
 
                     world.innerHTML += "<div class='redGhost'></div>";
 
 				}
 			//Yellow Ghost
-			else if ( map[y][x] === 9 ) {
+			else if ( map[y][x] === YELLOW_GHOST ) {
 
                     world.innerHTML += "<div class='yellowGhost'></div>";
 
 				}
 			//Green Ghost
-			else if ( map[y][x] === 10 ) {
+			else if ( map[y][x] === GREEN_GHOST ) {
 
                     world.innerHTML += "<div class='greenGhost'></div>";
 
 				}
 			//Pink Ghost
-			else if ( map[y][x] === 11 ) {
+			else if ( map[y][x] === PINK_GHOST ) {
 
                     world.innerHTML += "<div class='pinkGhost'></div>";
 

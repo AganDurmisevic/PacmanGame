@@ -17,7 +17,7 @@ function moveGhost ( event ) {
 
 //Pacman 1
 //Red,Yellow, Pink and green Ghost left.
-if( event.keyCode === 37 ) {
+if( event.keyCode === LEFT ) {
 
     if ( map[ redGhost.y ][ redGhost.x+1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x+1 ] !== 1 || map[ greenGhost.y ][ greenGhost.x+1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x+1 ] !== 1 ) {
 
@@ -42,7 +42,7 @@ if( event.keyCode === 37 ) {
 }
     
 //Red, yellow, pink and green Ghost up.
-else if ( event.keyCode === 38 ) {
+else if ( event.keyCode === UP ) {
 
     if ( map[ redGhost.y-1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y-1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y-1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y-1 ][ pinkGhost.x ] !== 1) {
 
@@ -67,7 +67,7 @@ else if ( event.keyCode === 38 ) {
 }
     
 //Red,Yellow, Pink and green Ghost right.
-else if ( event.keyCode === 39 ) {
+else if ( event.keyCode === RIGHT ) {
 
     if ( map[ redGhost.y ][ redGhost.x-1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x-1 ] !== 1 || map[ greenGhost.y ][greenGhost.x-1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x-1 ] !== 1 ) {
 
@@ -92,7 +92,7 @@ else if ( event.keyCode === 39 ) {
 }
     
 //Red,Yellow, Pink and green Ghost down.
-else if ( event.keyCode === 34 ) {
+else if ( event.keyCode === DOWN ) {
 
     if ( map[ redGhost.y+1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y+1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y+1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y+1 ][ pinkGhost.x ] !== 1 ) {
 
@@ -118,7 +118,7 @@ else if ( event.keyCode === 34 ) {
 
 //Pacman2
 //Red,Yellow, Pink and green Ghost left.
-    if( event.keyCode === 65 ) {
+    if( event.keyCode === LEFT_A ) {
 
         if ( map[ redGhost.y ][ redGhost.x+1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x+1 ] !== 1 || map[ greenGhost.y ][ greenGhost.x+1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x+1 ] !== 1 ) {
 
@@ -143,7 +143,7 @@ else if ( event.keyCode === 34 ) {
     }
 
 //Red, yellow, pink and green Ghost up.
-    else if ( event.keyCode === 87 ) {
+    else if ( event.keyCode === UP_W ) {
 
         if ( map[ redGhost.y-1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y-1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y-1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y-1 ][ pinkGhost.x ] !== 1) {
 
@@ -168,7 +168,7 @@ else if ( event.keyCode === 34 ) {
     }
 
 //Red,Yellow, Pink and green Ghost right.
-    else if ( event.keyCode === 68 ) {
+    else if ( event.keyCode === RIGHT_D ) {
 
         if ( map[ redGhost.y ][ redGhost.x-1 ] !== 1 || map[ yellowGhost.y ][ yellowGhost.x-1 ] !== 1 || map[ greenGhost.y ][greenGhost.x-1 ] !== 1 || map[ pinkGhost.y ][ pinkGhost.x-1 ] !== 1 ) {
 
@@ -193,7 +193,7 @@ else if ( event.keyCode === 34 ) {
     }
 
 //Red,Yellow, Pink and green Ghost down.
-    else if ( event.keyCode === 83 ) {
+    else if ( event.keyCode === DOWN_S ) {
 
         if ( map[ redGhost.y+1 ][ redGhost.x ] !== 1 || map[ yellowGhost.y+1 ][ yellowGhost.x ] !== 1 || map[ greenGhost.y+1 ][ greenGhost.x ] !== 1 || map[ pinkGhost.y+1 ][ pinkGhost.x ] !== 1 ) {
 

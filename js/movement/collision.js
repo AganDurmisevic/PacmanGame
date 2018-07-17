@@ -1,22 +1,22 @@
 function collisionLeft () {
 
-    if ( map[ pacman.y ][ pacman.x - 1 ] !== 1 && map[ pacman.y ][ pacman.x - 1 ] !== 7 ) {
+    if ( map[ pacman.y ][ pacman.x - 1 ] !== WALL ) {
 
-        if ( map[ pacman.y ][ pacman.x - 1 ] === 2 ) {
+        if ( map[ pacman.y ][ pacman.x - 1 ] === COIN ) {
 
             score = score + 10;
             eat.play();
 
         }
 
-        else if ( map[ pacman.y ][ pacman.x - 1 ] === 6 ) {
+        else if ( map[ pacman.y ][ pacman.x - 1 ] === COIN_2 ) {
 
             score = score + 10;
             eatPill.play();
 
         }
 
-        else if ( map[ pacman.y ][ pacman.x - 1 ] === 4 ) {
+        else if ( map[ pacman.y ][ pacman.x - 1 ] === COIN_1 ) {
 
             score = score + 40;
             eat.play();
@@ -41,23 +41,23 @@ function collisionLeft () {
 
 function collisionTop() {
 
-    if ( map[ pacman.y-1 ][ pacman.x ] !== 1 && map[ pacman.y-1 ][ pacman.x ] !== 7 ) {
+    if ( map[ pacman.y-1 ][ pacman.x ] !== WALL ) {
 
-        if ( map[ pacman.y - 1 ][ pacman.x ] === 2 ) {
+        if ( map[ pacman.y - 1 ][ pacman.x ] === COIN ) {
 
             score = score + 10;
             eat.play();
 
         }
 
-        else if ( map[ pacman.y - 1 ][ pacman.x ] === 6 ) {
+        else if ( map[ pacman.y - 1 ][ pacman.x ] === COIN_2 ) {
 
             score = score + 10;
             eatPill.play();
 
         }
 
-        else if ( map[ pacman.y - 1 ][ pacman.x ] === 4 ) {
+        else if ( map[ pacman.y - 1 ][ pacman.x ] === COIN_1 ) {
 
             score = score + 40;
             eat.play();
@@ -75,19 +75,26 @@ function collisionTop() {
 
 function collisionRight() {
 
-    if ( map[ pacman.y ][ pacman.x + 1 ] !== 1 && map[ pacman.y ][ pacman.x + 1 ] !== 7 ) {
+    if ( map[ pacman.y ][ pacman.x + 1 ] !== WALL ) {
 
-        if ( map[ pacman.y ][ pacman.x + 1 ] === 2 ) {
+        if ( map[ pacman.y ][ pacman.x + 1 ] === COIN ) {
 
             score = score + 10;
             eat.play();
 
         }
 
-        if ( map[ pacman.y ][ pacman.x + 1 ] === 6 ) {
+        if ( map[ pacman.y ][ pacman.x + 1 ] === COIN_2 ) {
 
             score = score + 40;
             eatPill.play();
+
+        }
+
+        if ( map[ pacman.y ][ pacman.x + 1 ] === COIN_1 ) {
+
+            score = score + 10;
+            eat.play();
 
         }
 
@@ -110,23 +117,23 @@ function collisionRight() {
 
 function collisionBottom() {
 
-    if ( map[ pacman.y+1 ][ pacman.x ] !== 1 && map[ pacman.y+1 ][ pacman.x ] !== 7 ) {
+    if ( map[ pacman.y+1 ][ pacman.x ] !== WALL ) {
 
-        if ( map[ pacman.y + 1 ][ pacman.x ] === 2 ) {
+        if ( map[ pacman.y + 1 ][ pacman.x ] === COIN ) {
 
             score = score + 10;
             eat.play();
 
         }
 
-        else if ( map[ pacman.y + 1 ][ pacman.x ] === 6 ) {
+        else if ( map[ pacman.y + 1 ][ pacman.x ] === COIN_2 ) {
 
             score = score + 40;
             eatPill.play();
 
         }
 
-        else if ( map[ pacman.y+1 ][ pacman.x ] === 4 ) {
+        else if ( map[ pacman.y+1 ][ pacman.x ] === COIN_1 ) {
 
             score = score + 40;
             eat.play();

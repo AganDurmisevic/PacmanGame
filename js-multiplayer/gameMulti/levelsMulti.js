@@ -1,19 +1,15 @@
-    // Map:
-	// 1 = <div class='wall'></div>            Wall
-	// 2 = <div class='coin'></div>            Food
-	// 3 = <div class='ground'></div>          Ground
-    // 4 = <div class='coin1'></div>           Food
-	// 5 = <div class='pacman'></div>          Pacman(Yellow)
-    // 6 = <div class='coin2'></div>           Food
-    // 7 = <div class='wallL'></div>           Wall
-    // 8 = <div class='redGhost'></div>        Red Ghost
-    // 9 = <div class='yellowGhost'></div>     Yellow Ghost
-    // 10 = <div class='greenGhost'></div>     Green Ghost
-    // 11 = <div class='pinkGhost'></div>      Pink Ghost
-    // 12 = <div class='pacman2'></div>        Pacman2(Green)
+const WALL = 1;
+const COIN = 2;
+const GROUND = 3;
+const COIN_1 = 4;
+const PACMAN = 5;
+const COIN_2 = 6;
+const RED_GHOST = 8;
+const YELLOW_GHOST = 9;
+const GREEN_GHOST = 10;
+const PINK_GHOST = 11;
+const PACMAN_2 = 12;
 
-    //An array that contains the levels and is related to CurrentLevel and function won or KeyListener (Space).
-    //If CurrentArray becomes larger after the operation of the Space key, the next digit of the array is loaded (newer level).
 var level = [
         //Level 1 (Array [0])
         {
@@ -28,11 +24,11 @@ var level = [
 
             map: [
 
-                    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-                    [1,3,5,2,2,2,2,2,3,2,2,2,2,2,8,1],
-                    [1,3,1,1,12,1,1,1,11,1,1,1,1,1,1,1],
-                    [1,10,3,3,3,3,9,3,3,1,1,1,1,1,1,1],
-                    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+                    [WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL],
+                    [WALL,GROUND,PACMAN,COIN,COIN,COIN,COIN,COIN,GROUND,COIN,COIN,COIN,COIN,COIN,RED_GHOST,WALL],
+                    [WALL,GROUND,WALL,WALL,PACMAN_2,WALL,WALL,WALL,PINK_GHOST,WALL,WALL,WALL,WALL,WALL,WALL,WALL],
+                    [WALL,GREEN_GHOST,GROUND,GROUND,GROUND,GROUND,YELLOW_GHOST,GROUND,GROUND,WALL,WALL,WALL,WALL,WALL,WALL,WALL],
+                    [WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL]
 
                 ],
 
@@ -68,7 +64,7 @@ var level = [
                     id: 11,
                     x: 8,
                     y: 2,
-                    fieldBehindTheGhost: 3
+                    fieldBehindTheGhost: GROUND
 
                 },
 
@@ -96,18 +92,18 @@ var level = [
 
             map: [
 
-                      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3],
-                      [1,6,9,3,12,10,3,11,3,1,3,2,3,3,8,3,3,3,1,3],
-                      [1,2,1,1,5,2,1,1,4,2,3,1,1,1,1,1,1,1,1,3],
-                      [3,4,3,2,3,2,1,1,3,1,2,3,2,3,2,2,3,3,1,3],
-                      [1,1,1,2,1,4,1,1,4,1,1,1,1,1,1,4,1,1,1,3],
-                      [1,2,3,2,1,2,2,3,2,1,4,3,4,2,4,2,1,2,1,3],
-                      [1,3,1,1,1,2,1,1,2,1,1,1,1,2,3,3,1,3,1,3],
-                      [1,3,2,4,1,2,1,1,4,1,6,3,3,3,1,3,1,3,1,3],
-                      [1,1,1,3,1,4,2,2,2,1,1,1,1,1,1,3,1,3,1,1],
-                      [1,2,1,2,2,2,1,1,2,1,3,3,3,3,3,3,3,3,3,3],
-                      [1,6,3,2,3,2,3,1,4,1,3,3,3,3,3,2,2,3,6,1],
-                      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+                      [WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,GROUND],
+                      [WALL,WALL,YELLOW_GHOST,GROUND,PACMAN_2,GREEN_GHOST,GROUND,PINK_GHOST,GROUND,WALL,GROUND,COIN,GROUND,GROUND,RED_GHOST,GROUND,GROUND,WALL,GROUND],
+                      [WALL,COIN_1,WALL,WALL,PACMAN,COIN,WALL,WALL,COIN_1,COIN,GROUND,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,GROUND],
+                      [GROUND,COIN_1,GROUND,COIN,GROUND,COIN,WALL,WALL,GROUND,WALL,COIN,GROUND,COIN,GROUND,COIN,COIN,GROUND,GROUND,WALL,GROUND],
+                      [WALL,WALL,WALL,COIN,WALL,COIN_1,WALL,WALL,COIN_1,WALL,WALL,WALL,WALL,WALL,WALL,COIN_1,WALL,WALL,WALL,GROUND],
+                      [WALL,COIN,GROUND,COIN,WALL,COIN,COIN,GROUND,COIN,WALL,COIN_1,GROUND,COIN_1,COIN,COIN_1,COIN,WALL,COIN,WALL,GROUND],
+                      [WALL,GROUND,WALL,WALL,WALL,COIN,WALL,WALL,COIN,WALL,WALL,WALL,WALL,COIN,GROUND,GROUND,WALL,GROUND,WALL,GROUND],
+                      [WALL,GROUND,COIN,COIN_1,WALL,COIN,WALL,WALL,COIN_1,WALL,COIN_2,GROUND,GROUND,GROUND,WALL,GROUND,WALL,GROUND,WALL,GROUND],
+                      [WALL,WALL,WALL,GROUND,WALL,COIN_1,COIN,COIN,COIN,WALL,WALL,WALL,WALL,WALL,WALL,GROUND,WALL,GROUND,WALL,WALL],
+                      [WALL,COIN,WALL,COIN,COIN,COIN,WALL,WALL,COIN,WALL,GROUND,GROUND,GROUND,GROUND,GROUND,GROUND,GROUND,GROUND,GROUND,GROUND],
+                      [WALL,COIN_2,GROUND,COIN,GROUND,COIN,GROUND,WALL,COIN_1,WALL,GROUND,GROUND,GROUND,GROUND,GROUND,COIN,COIN,GROUND,COIN_2,WALL],
+                      [WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL]
 
                 ],
 
@@ -171,20 +167,20 @@ var level = [
 
             map: [
 
-                  [3,1,1,1,1,1,1,1,1,1,7,1,1,1,1,1,1,1,1,7,1,1,1,3],
-                  [3,1,9,6,2,3,2,6,3,1,3,2,3,2,2,3,2,3,7,3,2,3,3,3],
-                  [3,1,1,1,2,1,1,1,2,1,10,1,1,1,2,1,1,4,2,3,1,1,1,3],
-                  [3,1,1,1,4,2,2,3,2,6,4,3,2,3,2,1,1,3,7,2,3,2,1,3],
-                  [3,1,8,7,2,1,3,1,1,1,1,1,2,7,4,1,1,4,7,2,7,1,1,3],
-                  [3,1,2,2,2,1,3,2,11,1,2,3,2,1,2,2,3,2,7,4,3,4,1,3],
-                  [3,1,1,1,2,1,1,1,3,1,3,1,1,1,2,1,1,2,1,2,3,7,1,3],
-                  [1,1,7,1,4,1,2,3,3,2,3,2,4,1,2,1,1,4,1,3,3,3,1,3],
-                  [3,3,2,2,2,1,3,1,1,6,7,1,3,1,4,2,2,2,1,1,1,1,1,1],
-                  [1,1,1,1,2,3,2,1,6,2,2,1,2,2,2,1,1,2,1,3,3,3,3,3],
-                  [3,1,1,2,3,7,2,1,1,7,7,1,2,1,2,2,1,4,1,3,3,3,1,1],
-                  [3,1,1,2,1,1,2,2,3,2,3,2,2,1,1,3,1,2,1,7,7,3,1,3],
-                  [3,1,3,3,2,6,4,1,2,5,1,1,3,2,4,3,2,6,3,3,3,3,1,3],                         
-                  [3,1,1,1,7,7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3]
+                  [GROUND,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,GROUND],
+                  [GROUND,WALL,YELLOW_GHOST,COIN_2,COIN,GROUND,COIN,COIN_2,GROUND,WALL,GROUND,COIN,GROUND,COIN,COIN,GROUND,COIN,GROUND,WALL,GROUND,COIN,GROUND,GROUND,GROUND],
+                  [GROUND,WALL,WALL,WALL,COIN,WALL,WALL,WALL,COIN,WALL,GREEN_GHOST,WALL,WALL,WALL,COIN,WALL,WALL,COIN_1,COIN,GROUND,WALL,WALL,WALL,GROUND],
+                  [GROUND,WALL,WALL,WALL,COIN_1,COIN,COIN,GROUND,COIN,COIN_2,COIN_1,GROUND,COIN,GROUND,COIN,WALL,WALL,GROUND,WALL,WALL,GROUND,COIN,WALL,GROUND],
+                  [GROUND,WALL,RED_GHOST,WALL,COIN,WALL,GROUND,WALL,WALL,WALL,WALL,WALL,COIN,WALL,COIN_1,WALL,WALL,COIN_1,WALL,COIN,WALL,WALL,WALL,GROUND],
+                  [GROUND,WALL,COIN,COIN,COIN,WALL,GROUND,COIN,PINK_GHOST,WALL,COIN,GROUND,COIN,WALL,COIN,COIN,GROUND,COIN,WALL,COIN_1,GROUND,COIN_1,WALL,GROUND],
+                  [GROUND,WALL,WALL,WALL,COIN,WALL,WALL,WALL,GROUND,WALL,GROUND,WALL,WALL,WALL,COIN,WALL,WALL,COIN,WALL,COIN,GROUND,WALL,WALL,GROUND],
+                  [WALL,WALL,WALL,WALL,COIN_1,WALL,COIN,GROUND,GROUND,COIN,GROUND,COIN,COIN_1,WALL,COIN,WALL,WALL,COIN_1,WALL,GROUND,GROUND,GROUND,WALL,GROUND],
+                  [GROUND,GROUND,COIN,COIN,COIN,WALL,GROUND,WALL,WALL,COIN_2,WALL,WALL,GROUND,WALL,COIN_1,COIN,COIN,COIN,WALL,WALL,WALL,WALL,WALL,WALL],
+                  [WALL,WALL,WALL,WALL,COIN,GROUND,COIN,WALL,COIN_2,COIN,COIN,WALL,COIN,COIN,COIN,WALL,WALL,COIN,WALL,GROUND,GROUND,GROUND,GROUND,GROUND],
+                  [GROUND,WALL,WALL,COIN,GROUND,WALL,COIN,WALL,WALL,WALL,WALL,WALL,COIN,WALL,COIN,COIN,WALL,COIN_1,WALL,GROUND,GROUND,GROUND,WALL,WALL],
+                  [GROUND,WALL,WALL,COIN,WALL,WALL,COIN,COIN,GROUND,COIN,GROUND,COIN,COIN,WALL,WALL,GROUND,WALL,COIN,WALL,WALL,WALL,GROUND,WALL,GROUND],
+                  [GROUND,WALL,GROUND,GROUND,COIN,COIN_2,COIN_1,WALL,COIN,PACMAN,WALL,WALL,GROUND,COIN,COIN_1,GROUND,COIN,COIN_2,GROUND,GROUND,GROUND,GROUND,WALL,GROUND],
+                  [GROUND,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,WALL,GROUND]
 
               ],
 

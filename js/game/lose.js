@@ -77,6 +77,7 @@ function lose () {
             }
 
     }
+
     drawWorld ();
     return false;
 

@@ -12,7 +12,7 @@ function won () {
             for ( var j = 0; j < map[ i ].length; j = j + 1 ) {
 
                     //console.log("idex i: " + i + " index j: " + j);
-                    if ( ( map[ i ][ j ] === 2 ) || ( map[ i ][ j ] === 4 ) || ( map[ i ][ j ] === 6 ) ) {
+                    if ( ( map[ i ][ j ] === COIN ) || ( map[ i ][ j ] === COIN_1 ) || ( map[ i ][ j ] === COIN_2 ) ) {
 
                         count += 1;
                         return false;
